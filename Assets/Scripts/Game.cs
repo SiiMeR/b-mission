@@ -24,10 +24,10 @@ public class Game : MonoBehaviour
         {
             GameObject tree = GameObject.Instantiate(Flower); 
             trees.Add(tree);
-            float multiplier = Random.Range(0.5f, 2f);
+            float multiplier = Random.Range(-5f, 0f);
             float vahe = tree.transform.localScale.y * multiplier;
-            tree.transform.localScale = new Vector3(tree.transform.localScale.x, tree.transform.localScale.y* multiplier,0);
-            tree.transform.position = new Vector3(treeDistance * 7f* i, -1.9f, 0f);
+            //tree.transform.localScale = new Vector3(tree.transform.localScale.x, tree.transform.localScale.y* multiplier,0);
+            tree.transform.position = new Vector3(treeDistance * 7f* i, multiplier, 0f);
         }
     }
 
@@ -40,7 +40,8 @@ public class Game : MonoBehaviour
                 tree.transform.position -= new Vector3(Time.deltaTime + speed, 0f, 0f);
                 if (tree.transform.position.x < -10)
                 {
-                    tree.transform.position = new Vector3(10f, -1.9f, 0f);
+                    float multiplier = Random.Range(-5f, 0f);
+                    tree.transform.position = new Vector3(10f, multiplier, 0f);
                 }
             }
         }
