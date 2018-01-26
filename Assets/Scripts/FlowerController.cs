@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlowerController : MonoBehaviour {
+public class FlowerController : MonoBehaviour
+{
 
+	private const int SCORE_PICK = 10;
 	// Use this for initialization
 	void Start () {
 		
@@ -16,8 +18,11 @@ public class FlowerController : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		
-		print(other.gameObject.tag);
-		Destroy(gameObject);
+		if (other.gameObject.CompareTag("Player"))
+		{
+			GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>().CurrentScore += SCORE_PICK;
+			Destroy(gameObject);
+		}
+
 	}
 }
