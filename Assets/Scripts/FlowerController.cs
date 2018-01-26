@@ -26,7 +26,7 @@ public class FlowerController : MonoBehaviour
 		if (other.gameObject.CompareTag("Player"))
 		{
 			GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>().CurrentScore += SCORE_PICK;
-			Destroy(gameObject);
+		//		Destroy(gameObject);
 		}
 
 	}
