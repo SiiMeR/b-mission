@@ -20,9 +20,6 @@ public class BeeMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-        //        bee_width = 
-//        bee_width = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
-//        bee_height = gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
         CalcScreenBorders();
     }
 	
@@ -32,22 +29,6 @@ public class BeeMovement : MonoBehaviour {
         float move_y = Input.GetAxis("Vertical");
 
         rb2d.velocity = new Vector2(bee_speed * move_x, bee_speed * move_y);
-/*        if (move_x > 0.0f)
-        {
-            rb2d.transform.position = new Vector3(transform.position.x + bee_speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
-        if (move_x < 0.0f)
-        {
-            rb2d.transform.position = new Vector3(transform.position.x - bee_speed * Time.deltaTime, transform.position.y, transform.position.z);
-        }
-        if (move_y > 0.0f)
-        {
-            rb2d.transform.position = new Vector3(transform.position.x, transform.position.y + bee_speed * Time.deltaTime, transform.position.z);
-        }
-        if (move_y < 0.0f)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y - bee_speed * Time.deltaTime, transform.position.z);
-        } */
 /*        transform.position = (new Vector3(
     Mathf.Clamp(transform.position.x, leftBorder, rightBorder),
     Mathf.Clamp(transform.position.y, bottomBorder, topBorder),
