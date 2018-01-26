@@ -6,9 +6,14 @@ public class FlowerController : MonoBehaviour
 {
 
 	private const int SCORE_PICK = 10;
+
+	private Color color;
+
+	private List<Color> flowerColors = new List<Color>(){ Color.red, Color.yellow, Color.green };
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		color = flowerColors[Random.Range(0, flowerColors.Count)];
 	}
 	
 	// Update is called once per frame

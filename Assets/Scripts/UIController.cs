@@ -18,6 +18,6 @@ public class UIController : MonoBehaviour
 	void Update ()
 	{
 		scoreText.text = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>().CurrentScore.ToString();
-		timeText.text = Mathf.Floor(Time.timeSinceLevelLoad).ToString(	);
+		timeText.text = Mathf.Floor(Time.timeSinceLevelLoad).ToString();
 	}
 }
