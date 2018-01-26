@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScoreController
+public class ScoreManager : MonoBehaviour
 {
 	private int currentScore = 0;
 	
@@ -12,9 +12,4 @@ public class ScoreController
 		set { currentScore = value; }
 	}
 
-
-	public void addScore(int score)
-	{
-		CurrentScore += score;
-	}
 }
