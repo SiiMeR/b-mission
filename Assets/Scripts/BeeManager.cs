@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class BeeManager : MonoBehaviour
 {
+	private GameObject currentPollen;
 	private int currentScore = 0;
-	
+
+
+	public GameObject CurrentPollen
+	{
+		get { return currentPollen; }
+		set { currentPollen = value; }
+	}
+
 	public int CurrentScore
 	{
 		get { return currentScore; }

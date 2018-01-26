@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		scoreText.text = GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>().CurrentScore.ToString();
+		scoreText.text = GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>().CurrentScore.ToString();
 		timeText.text = Mathf.Floor(Time.timeSinceLevelLoad).ToString();
 	}
 }

@@ -5,15 +5,13 @@ using UnityEngine;
 public class FlowerController : MonoBehaviour
 {
 
+	[SerializeField] private GameObject pollenPrefab;
+	
 	private const int SCORE_PICK = 10;
-
-	private Color color;
-
-	private List<Color> flowerColors = new List<Color>(){ Color.red, Color.yellow, Color.green };
+	
 	// Use this for initialization
 	void Start ()
 	{
-		color = flowerColors[Random.Range(0, flowerColors.Count)];
 	}
 	
 	// Update is called once per frame
@@ -25,7 +23,16 @@ public class FlowerController : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			GameObject.FindGameObjectWithTag("GameState").GetComponent<GameState>().CurrentScore += SCORE_PICK;
+			
+			BeeManager bm = GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>();
+			
+			if (bm.CurrentPollen == pollenPrefab)
+			{
+				bm.CurrentScore += SCORE_PICK;
+				bm.CurrentPollen = null;
+			}
+			bm.CurrentPollen = pollenPrefab;
+			bm.CurrentPollen.SetActive(true);
 		//		Destroy(gameObject);
 		}
 

@@ -317,6 +317,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: becb8664467cd0f488b5ce043d774846, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1193870758 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1757152228638480, guid: cdba4a453eff72c448836f04b2d29d89,
+    type: 2}
+  m_PrefabInternal: {fileID: 1963282066}
+--- !u!114 &1193870765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193870758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d0d673d47783649bfae4c1abcbd5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1438706640
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,25 +414,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1794715914 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1447850081210432, guid: ecdd02acf8ab3cd4391597ec9e11bfe2,
-    type: 2}
-  m_PrefabInternal: {fileID: 870185523}
---- !u!114 &1794715915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1794715914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711c669c75e660346a6f72705b3f78b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Flower: {fileID: 1044378967957672, guid: 9f8c21b04b1526a46b5dc33edb35a1ab, type: 2}
-  treeDistance: 1
-  speed: 1
 --- !u!1001 &1963282066
 Prefab:
   m_ObjectHideFlags: 0
@@ -455,11 +452,6 @@ Prefab:
     - target: {fileID: 4029137125874004, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212768840517375174, guid: cdba4a453eff72c448836f04b2d29d89,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
