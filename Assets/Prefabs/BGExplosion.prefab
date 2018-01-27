@@ -52,9 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStateVar: {fileID: 0}
-  tileSize: {x: 480, y: 320}
   backgroundTiles:
   - {fileID: 21300000, guid: d336aaf22c5288f4989103520f095f62, type: 3}
-  speedMultiplier: 0.25
+  speedMultiplier: 0
   layerNumber: 11
   sortingLayer: BGExplosion
