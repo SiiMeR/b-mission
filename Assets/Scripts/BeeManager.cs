@@ -79,6 +79,8 @@ public class BeeManager : MonoBehaviour
 
 			if (equals)
 			{
+				;
+				;
 				CurrentScore += 10;
                 if (puns.Length > 0)
                 {

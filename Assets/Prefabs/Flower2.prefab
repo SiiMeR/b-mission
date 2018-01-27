@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4479916395764498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flower2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4826013095805116}
   - component: {fileID: 212173428567231088}
   - component: {fileID: 61843606261286898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stem (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 61282637526033196}
   - component: {fileID: 114305172393332276}
   - component: {fileID: 95572417345320302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blossom (1)
   m_TagString: PurpleFlower
   m_Icon: {fileID: 0}
@@ -212,8 +212,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -7959831
+  m_SortingLayer: -1
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: cbba845091ec7564c86f405bf15f623a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,8 +256,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -7959831
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ff87f2ba69fcf3941920a81c07fdacd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
