@@ -12,7 +12,7 @@ public class Game : MonoBehaviour
     public List<GameObject> FlowerPrefabs;
     
     public float speed = 1f;
-    private float FLOWER_COOLDOWN = 5.0f;
+    private float FLOWER_COOLDOWN = 8.0f;
     private float maxSpeed = 50f;
     private float speedIncrement = 0.5f;
     private float speedChangeInterval = 10f;
@@ -20,6 +20,8 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        
+        timeSpent = 5.0f;
         Example();
         if (gameOverPanel)
         {
@@ -93,7 +95,7 @@ public class Game : MonoBehaviour
             
         GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
 
-        float randomDistance = Random.Range(0, 5);
+        float randomDistance = Random.Range(5, 15);
         
         Vector3 fPos =  new Vector3(15 + randomDistance, multiplier, 0f);
         GameObject flower = Instantiate(randomFlowerPrefab, fPos,Quaternion.identity);
