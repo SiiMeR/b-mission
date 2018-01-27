@@ -1,13 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Game : MonoBehaviour
 {
     public static Game instance;
-    public GameObject gameOverPanel;    
+    public GameObject gameOverPanel;   
     private float timeSpent;
     private float timeSinceSpeedChange;
+    public Image black;
+    public Animator anim;
+    public Text text;
 
     public List<GameObject> FlowerPrefabs;
     
@@ -21,8 +26,12 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        gameOverPanel.SetActive(false);            
-        
+        anim.SetBool("Fade", false);
+        gameOverPanel.SetActive(true);
+        black.canvasRenderer.SetAlpha(0.0f);
+        text.canvasRenderer.SetAlpha(0.0f);
+
+
         timeSpent = 5.0f;
         Example();
 
@@ -76,23 +85,20 @@ public class Game : MonoBehaviour
     GameObject generateNewFlower()
     {
         float multiplier = Random.Range(-5f, 0f);
-            
         GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
-
-        float randomDistance = Random.Range(5, 15);
-        
+        float randomDistance = Random.Range(5, 15);        
         Vector3 fPos =  new Vector3(15 + randomDistance, multiplier, 0f);
         GameObject flower = Instantiate(randomFlowerPrefab, fPos,Quaternion.identity);
-
         return flower;
         
     }
     IEnumerator Example()
     {
+        black.CrossFadeAlpha(1.0f, 1, true);
+        text.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
         Time.timeScale = 1;
         Application.LoadLevel(Application.loadedLevel);
-
     }
     public void Restart()
     {
@@ -103,7 +109,7 @@ public class Game : MonoBehaviour
             GameObject.Destroy(flower);
         }
         StartCoroutine(Example());
-        gameOverPanel.SetActive(true);
+       
     }
 
 
