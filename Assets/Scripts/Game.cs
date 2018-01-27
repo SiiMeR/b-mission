@@ -247,7 +247,7 @@ public class Game : MonoBehaviour
                 speed += speedIncrement;
                 timeSinceSpeedChange = 0f;
             }
-        }======        
+        }      
 
     } 
 
