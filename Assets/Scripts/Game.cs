@@ -17,18 +17,15 @@ public class Game : MonoBehaviour
     private float speedIncrement = 0.5f;
     private float speedChangeInterval = 10f;
     private List<GameObject> flowers;
+    private bool gameOn;
 
     void Start()
     {
-        Example();
-        if (gameOverPanel)
-        {
-            gameOverPanel.SetActive(false);            
-        }
-
+        gameOverPanel.SetActive(false);            
         FLOWER_COOLDOWN /=speed;
         flowers = new List<GameObject>();
         instance = this;
+        gameOn = true;
  /*       for (int i = 0; i < 3; i++)
         {
             float multiplier = Random.Range(-5f, 0f);
@@ -45,32 +42,39 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        timeSpent += Time.deltaTime;
-        timeSinceSpeedChange += Time.deltaTime;
-        if (timeSinceSpeedChange >= speedChangeInterval && speed < maxSpeed)
+        if (gameOn)
         {
-            speed += speedIncrement;
-            timeSinceSpeedChange = 0f;
-        }
-
-        if (timeSpent > FLOWER_COOLDOWN)
-        {
-            timeSpent = 0;
-
-            GameObject newFlower = generateNewFlower();
-            flowers.Add(newFlower);
-        }
-        flowers.ForEach(flower =>
-        {
-            flower.transform.position -= new Vector3(Time.deltaTime * speed, 0f, 0f);
-      //      flower.transform.Translate(Time.deltaTime * speed, 0,0, Space.World);
-      //      flower.transform.velocity = new Vector2(bee_speed * move_x, bee_speed * move_y);
-            if (flower.transform.position.x <= -15)
+            timeSpent += Time.deltaTime;
+            timeSinceSpeedChange += Time.deltaTime;
+            if (timeSinceSpeedChange >= speedChangeInterval && speed < maxSpeed)
             {
-                flowers.Remove(flower);
-                DestroyImmediate(flower);
+                speed += speedIncrement;
+                timeSinceSpeedChange = 0f;
             }
-        });
+
+            if (timeSpent > FLOWER_COOLDOWN)
+            {
+                timeSpent = 0;
+
+                GameObject newFlower = generateNewFlower();
+                flowers.Add(newFlower);
+            }
+            flowers.ForEach(flower =>
+            {
+                flower.transform.position -= new Vector3(Time.deltaTime * speed, 0f, 0f);
+            //      flower.transform.Translate(Time.deltaTime * speed, 0,0, Space.World);
+            //      flower.transform.velocity = new Vector2(bee_speed * move_x, bee_speed * move_y);
+            if (flower.transform.position.x <= -15)
+                {
+                    flowers.Remove(flower);
+                    DestroyImmediate(flower);
+                }
+            });
+        }
+        else
+        {
+
+        }
         
         
     /*    foreach (GameObject flower in flowers)
@@ -105,17 +109,18 @@ public class Game : MonoBehaviour
     {
         print("siin");
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
-        Start();
+        Application.LoadLevel(Application.loadedLevel);
 
     }
     public void Restart()
     {
-        StartCoroutine(Example());
-        gameOverPanel.SetActive(true);
+        gameOn = false;
         foreach (GameObject flower in flowers)
         {
             GameObject.Destroy(flower);
         }
+        StartCoroutine(Example());
+        gameOverPanel.SetActive(true);
     }
 
 
