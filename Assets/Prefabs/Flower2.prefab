@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 114783225449738022}
   m_Layer: 0
   m_Name: Cristal
-  m_TagString: Untagged
+  m_TagString: PurpleFlower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1c18578214d6945aab73412634b178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pollenPrefab: {fileID: 1806869877146536}
 --- !u!212 &212102275621622160
 SpriteRenderer:
   m_ObjectHideFlags: 1

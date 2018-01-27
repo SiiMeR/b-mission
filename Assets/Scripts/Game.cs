@@ -25,6 +25,8 @@ public class Game : MonoBehaviour
             Vector3 pos =  new Vector3(5 + flowerDistance * 7f* i, multiplier, 0f);
             
             GameObject flower = Instantiate(randomFlowerPrefab, pos,Quaternion.identity); 
+            
+            
             flowers.Add(flower);
             
             float vahe = flower.transform.localScale.y * multiplier;

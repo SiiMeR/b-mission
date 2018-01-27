@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class FlowerController : MonoBehaviour
 {
-
-	[SerializeField] private GameObject pollenPrefab;
-	
 	private const int SCORE_PICK = 10;
 	
+	
+	private Color color;
+
+	public Color Color
+	{
+		get { return color; }
+		set { color = value; }
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -23,10 +29,8 @@ public class FlowerController : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Player"))
 		{
-			
 			BeeManager bm = GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>();
 			bm.CurrentScore += SCORE_PICK;
-
 		}
 
 	}
