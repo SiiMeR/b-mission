@@ -257,16 +257,6 @@ Prefab:
       propertyPath: gameStateVar
       value: 
       objectReference: {fileID: 1923797166}
-    - target: {fileID: 114565467296532308, guid: 4d9903c518f68ab48a2ce0c741c4f285,
-        type: 2}
-      propertyPath: speedMultiplier
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 114565467296532308, guid: 4d9903c518f68ab48a2ce0c741c4f285,
-        type: 2}
-      propertyPath: tileSize.x
-      value: 460
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d9903c518f68ab48a2ce0c741c4f285, type: 2}
   m_IsPrefabParent: 0
