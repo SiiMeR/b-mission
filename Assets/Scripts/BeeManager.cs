@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class BeeManager : MonoBehaviour
 {
+	enum PollenColor
+	{
+		RED,
+		BLUE,
+		PURPLE,
+		NONE
+	}
+
+	private PollenColor currentPollenColor = PollenColor.NONE;
 	private Animator beeAnimator;
 	
 	private int currentScore = 0;
-	private bool isHoldingPollen;
-	
 	public int CurrentScore
 	{
 		get { return currentScore; }
@@ -23,42 +30,72 @@ public class BeeManager : MonoBehaviour
 	
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{	
-		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		GameObject otherObject = other.gameObject;
 
-		if (otherObject.tag.Contains("Flower"))
+		if (otherObject.GetComponent<FlowerController>())
 		{
-			
 			beeAnimator.SetTrigger("PollenPick");
 
-			if (isHoldingPollen)
-			{
-				beeAnimator.SetTrigger("DropPollen");
-				isHoldingPollen = false;
-				return;
-			}
+			bool equals = false;
+			PollenColor flowerColor = PollenColor.NONE;
 			
 			
 			switch (otherObject.tag)
 			{
-				case "BlueFlower":
-					beeAnimator.SetTrigger("Blue");
-					break;
-				case "RedFlower":
-					beeAnimator.SetTrigger("Red");
-					break;
-				case "PurpleFlower":
-					beeAnimator.SetTrigger("Purple");
-					break;
-					
+					case "BlueFlower":
+						if (currentPollenColor == PollenColor.BLUE)
+						{
+							equals = true;
+							
+						}
+						flowerColor = PollenColor.BLUE;
+						break;
+					case "RedFlower":
+						if (currentPollenColor == PollenColor.RED)
+						{
+							equals = true;
+							
+						}
+						flowerColor = PollenColor.RED;
+						break;
+					case "PurpleFlower":
+						if (currentPollenColor == PollenColor.PURPLE)
+						{
+							equals = true;
+							
+						}
+						flowerColor = PollenColor.PURPLE;
+						break;
 			}
-			isHoldingPollen = true;
+
+			if (equals)
+			{
+				CurrentScore += 10;
+				currentPollenColor = PollenColor.NONE;
+				beeAnimator.SetTrigger("DropPollen");
+			}
+			else
+			{
+				currentPollenColor = flowerColor;
+
+				switch (currentPollenColor)
+				{
+						case PollenColor.BLUE:
+							beeAnimator.SetTrigger("Blue");
+							break;
+						case PollenColor.PURPLE:
+								beeAnimator.SetTrigger("Purple");
+								break;
+						case PollenColor.RED:
+								beeAnimator.SetTrigger("Red");
+								break;
+				}
+			}
+		//	Destroy(gameObject);
 		}
 	}
 }

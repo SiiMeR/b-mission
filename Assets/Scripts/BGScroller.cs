@@ -6,37 +6,45 @@ public class BGScroller : MonoBehaviour {
     public GameObject gameStateVar;
     public Vector2 tileSize;
     public Sprite[] backgroundTiles;
+    public float speedMultiplier = 0.5f;
 
     private int tilesToScreenX;
     private int tilesToScreenY;
+    private Vector2 resolution;
+    private float worldScreenHeight;
 
     private float scrollSpeed;
 
 	// Use this for initialization
 	void Start () {
-        scrollSpeed = gameStateVar.GetComponent<Game>().speed * 0.5f;
+        resolution = new Vector2(Screen.width, Screen.height);
         tilesToScreenX = (int)Mathf.Ceil(Screen.width / tileSize.x) + 1;
-        tilesToScreenY = (int)Mathf.Ceil(Screen.height / tileSize.y) + 1;
+
+        worldScreenHeight = Camera.main.orthographicSize * 2;
+        float halfScreenWidth = Camera.main.orthographicSize * resolution.x / resolution.y;
 
         for (int x = 0; x < tilesToScreenX; x++)
         {
-            for (int y = 0; y < tilesToScreenY; y++)
-            {
-                GameObject go = new GameObject("BG Tile");
-                SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
-                renderer.sprite = backgroundTiles[Random.Range(0, backgroundTiles.Length)];
-                renderer.sortingLayerName = "Background";
-//                Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, -100f));
-                go.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, 100f)); //new Vector2(x * tileSize.x, y * tileSize.y);
-                go.layer = 8;
+            GameObject go = new GameObject("BG Tile");
+            SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
+            renderer.sprite = backgroundTiles[Random.Range(0, backgroundTiles.Length)];
+            renderer.sortingLayerName = "Background";
+            //                Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, -100f));
+            float scaleMultiplier = worldScreenHeight / renderer.sprite.bounds.size.y;
+            go.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1f);
+            go.transform.position = new Vector3(x * (tileSize.x / renderer.sprite.pixelsPerUnit) * scaleMultiplier - halfScreenWidth, 0f, 100f);//Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, 11f)); //new Vector2(x * tileSize.x, y * tileSize.y);
+            go.layer = 8;
 
-                go.transform.parent = gameObject.transform;
-            }
+            go.transform.parent = gameObject.transform;
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void FixedUpdate()
+    {
+        foreach (Transform child in transform)
+        {
+            scrollSpeed = gameStateVar.GetComponent<Game>().speed * speedMultiplier;
+            child.position = new Vector3(child.position.x - scrollSpeed * Time.deltaTime, child.position.y, child.position.z);
+        }
+    }
 }
