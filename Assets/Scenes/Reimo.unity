@@ -404,18 +404,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1073494968911038, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1757152228638480, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487853574155724, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdba4a453eff72c448836f04b2d29d89, type: 2}
   m_IsPrefabParent: 0
@@ -593,8 +581,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba55f6344bb44d45b381efa85602830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  timespent: 0
+  audioClips: []
+  musicVolume: 1
+  soundVolume: 1
+  maxAudios: 16
 --- !u!1001 &1277419458
 Prefab:
   m_ObjectHideFlags: 0
@@ -743,11 +733,6 @@ Prefab:
       propertyPath: gameStateVar
       value: 
       objectReference: {fileID: 1923797166}
-    - target: {fileID: 114477702939381512, guid: af7feadc2e8be6c4da56f2249fb16468,
-        type: 2}
-      propertyPath: speedMultiplier
-      value: 0.05
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: af7feadc2e8be6c4da56f2249fb16468, type: 2}
   m_IsPrefabParent: 0
