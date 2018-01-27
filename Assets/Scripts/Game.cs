@@ -12,7 +12,7 @@ public class Game : MonoBehaviour
     public List<GameObject> FlowerPrefabs;
     
     public float speed = 1f;
-    private float FLOWER_COOLDOWN = 5.0f;
+    private float FLOWER_COOLDOWN = 8.0f;
     private float maxSpeed = 50f;
     private float speedIncrement = 0.5f;
     private float speedChangeInterval = 10f;
@@ -22,22 +22,15 @@ public class Game : MonoBehaviour
     void Start()
     {
         gameOverPanel.SetActive(false);            
+        
+        timeSpent = 5.0f;
+        Example();
+
         FLOWER_COOLDOWN /=speed;
         flowers = new List<GameObject>();
         instance = this;
         gameOn = true;
- /*       for (int i = 0; i < 3; i++)
-        {
-            float multiplier = Random.Range(-5f, 0f);
-            
-            GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
-            Vector3 pos =  new Vector3(5 + flowerDistance *  i, multiplier, 0f);
-            
-            GameObject flower = Instantiate(randomFlowerPrefab, pos,Quaternion.identity);     
-            flowers.Add(flower);     
-        }
-        
- */
+
     }
 
     void Update()
@@ -77,17 +70,6 @@ public class Game : MonoBehaviour
         }
         
         
-    /*    foreach (GameObject flower in flowers)
-        {
-            flower.transform.position -= new Vector3(Time.deltaTime * speed, 0f, 0f);
-            if (flower.transform.position.x <= -15 && timeSpent > FLOWER_COOLDOWN)
-            {   
-                timeSpent = 0;
-                float multiplier = Random.Range(-5f, 0f);
-                flower.transform.position = new Vector3(16f, multiplier, 0f);
-                
-            }
-        }*/
 
     }
 
@@ -97,7 +79,7 @@ public class Game : MonoBehaviour
             
         GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
 
-        float randomDistance = Random.Range(0, 5);
+        float randomDistance = Random.Range(5, 15);
         
         Vector3 fPos =  new Vector3(15 + randomDistance, multiplier, 0f);
         GameObject flower = Instantiate(randomFlowerPrefab, fPos,Quaternion.identity);

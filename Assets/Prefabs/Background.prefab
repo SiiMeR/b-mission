@@ -68,4 +68,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 28174d5b6ec6770458397e88b37476f1, type: 3}
   - {fileID: 21300000, guid: d8b860675e794f14585d6246e9c38222, type: 3}
   - {fileID: 21300000, guid: 3442020b9c738094b845dcaf167fc3a4, type: 3}
-  speedMultiplier: 0.25
+  speedMultiplier: 0.98
+  layerNumber: 8
+  sortingLayer: Background

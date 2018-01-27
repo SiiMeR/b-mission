@@ -7,11 +7,14 @@ public class BGScroller : MonoBehaviour {
     public Vector2 tileSize;
     public Sprite[] backgroundTiles;
     public float speedMultiplier = 0.5f;
+    public int layerNumber = 8;
+    public string sortingLayer;
 
     private int tilesToScreenX;
     private int tilesToScreenY;
     private Vector2 resolution;
     private float worldScreenHeight;
+    private float halfScreenWidth;
 
     private float scrollSpeed;
 
@@ -21,21 +24,11 @@ public class BGScroller : MonoBehaviour {
         tilesToScreenX = (int)Mathf.Ceil(Screen.width / tileSize.x) + 1;
 
         worldScreenHeight = Camera.main.orthographicSize * 2;
-        float halfScreenWidth = Camera.main.orthographicSize * resolution.x / resolution.y;
+        halfScreenWidth = Camera.main.orthographicSize * resolution.x / resolution.y;
 
         for (int x = 0; x < tilesToScreenX; x++)
         {
-            GameObject go = new GameObject("BG Tile");
-            SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
-            renderer.sprite = backgroundTiles[Random.Range(0, backgroundTiles.Length)];
-            renderer.sortingLayerName = "Background";
-            //                Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, -100f));
-            float scaleMultiplier = worldScreenHeight / renderer.sprite.bounds.size.y;
-            go.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1f);
-            go.transform.position = new Vector3(x * (tileSize.x / renderer.sprite.pixelsPerUnit) * scaleMultiplier - halfScreenWidth, 0f, 100f);//Camera.main.ScreenToWorldPoint(new Vector3(x * tileSize.x, y * tileSize.y, 11f)); //new Vector2(x * tileSize.x, y * tileSize.y);
-            go.layer = 8;
-
-            go.transform.parent = gameObject.transform;
+            CreateTile(x);
         }
     }
 	
@@ -43,8 +36,31 @@ public class BGScroller : MonoBehaviour {
     {
         foreach (Transform child in transform)
         {
+            float newX = child.position.x - scrollSpeed * Time.deltaTime;
+            if (newX < -child.GetComponent<SpriteRenderer>().sprite.bounds.size.x * worldScreenHeight / child.GetComponent<SpriteRenderer>().sprite.bounds.size.y - child.GetComponent<SpriteRenderer>().sprite.bounds.size.x)
+            {
+                Destroy(child.gameObject);
+
+                CreateTile(tilesToScreenX - 1);
+            }
             scrollSpeed = gameStateVar.GetComponent<Game>().speed * speedMultiplier;
             child.position = new Vector3(child.position.x - scrollSpeed * Time.deltaTime, child.position.y, child.position.z);
+            
         }
+    }
+
+    void CreateTile(int x)
+    {
+        GameObject go = new GameObject("BG Tile");
+        SpriteRenderer renderer = go.AddComponent<SpriteRenderer>();
+        renderer.sprite = backgroundTiles[Random.Range(0, backgroundTiles.Length)];
+        renderer.sortingLayerName = sortingLayer;
+        go.layer = layerNumber;
+        float scaleMultiplier = worldScreenHeight / renderer.sprite.bounds.size.y;
+        go.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1f);
+        float posX = x * renderer.sprite.bounds.size.x * scaleMultiplier - renderer.sprite.bounds.size.x;
+        go.transform.position = new Vector3(posX, 0f, 100f);
+
+        go.transform.parent = gameObject.transform;
     }
 }
