@@ -107,13 +107,14 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
-        print("siin");
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
+        Time.timeScale = 1;
         Application.LoadLevel(Application.loadedLevel);
 
     }
     public void Restart()
     {
+        Time.timeScale = 0;
         gameOn = false;
         foreach (GameObject flower in flowers)
         {
