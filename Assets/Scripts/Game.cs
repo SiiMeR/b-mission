@@ -16,7 +16,6 @@ public class Game : MonoBehaviour
 
     private float timeSinceSpeedChange;
     public Image black;
-    public Animator anim;
     public Text text;
 
     public List<GameObject> FlowerPrefabs;
@@ -36,10 +35,12 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
+        if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
+        {
+            AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
+        }
         
-        
-        anim.SetBool("Fade", false);
+
         gameOverPanel.SetActive(true);
         black.canvasRenderer.SetAlpha(0.0f);
         text.canvasRenderer.SetAlpha(0.0f);
@@ -48,9 +49,10 @@ public class Game : MonoBehaviour
         timeSpent = 5.0f;
         gameOverPanel.SetActive(false);            
         
-        timeSpentLayer1 = 5.0f;
+        timeSpentLayer1 = 4.0f;
         timeSpentLayer2 = 0f;
 
+        
         FLOWER_COOLDOWN /=speed;
         layer1Flowers = new List<GameObject>();
         layer2Flowers = new List<GameObject>();
@@ -126,7 +128,13 @@ public class Game : MonoBehaviour
         {
             timeSpentLayer2 = 0;
             GameObject newFlower = generateNewFlower();
-            
+            print(newFlower.transform.localScale);
+            newFlower.transform.localScale = new Vector3(newFlower.transform.localScale.x-0.2f,newFlower.transform.localScale.y-0.2f,1f);
+
+            foreach (var sr in newFlower.GetComponentsInChildren<SpriteRenderer>())
+            {
+                sr.sortingLayerName = "Layer_2";
+            }
             if (layer1Active)
             {
                 setAlphaAndCollision(newFlower,false);
@@ -153,102 +161,10 @@ public class Game : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            layer1Active = !layer1Active; // flip the active layer
-            
-            if (layer1Active)
-            {
-                
-                layer1Flowers.ForEach(flower =>
-                {
-                    var renderers = flower.GetComponentsInChildren<Renderer>();
-                    
-                    foreach (var renderer in renderers)
-                    {
-                        var materialColor = renderer.material.color;
-                        materialColor.a = 1.0f;
-                        renderer.material.color = materialColor;
-                    }
-                    
-                    var bColliders = flower.GetComponentsInChildren<BoxCollider2D>();
-                    
-                    foreach (var boxCollider2D in bColliders)
-                    {
-                        boxCollider2D.enabled = true;
-                    }
-                    
-
-                });
-                layer2Flowers.ForEach(flower =>
-                {
-                    var renderers = flower.GetComponentsInChildren<Renderer>();
-                    
-                    foreach (var renderer in renderers)
-                    {
-                        var materialColor = renderer.material.color;
-                        materialColor.a = 0.3f;
-                        renderer.material.color = materialColor;
-                    }
-                    
-                    var bColliders = flower.GetComponentsInChildren<BoxCollider2D>();
-                    
-                    foreach (var boxCollider2D in bColliders)
-                    {
-                        boxCollider2D.enabled = false;
-                    }
-                    
-                });
-            }
-            else // layer 2 active
-            {
-                
-                layer1Flowers.ForEach(flower =>
-                {
-                    var renderers = flower.GetComponentsInChildren<Renderer>();
-                    
-                    foreach (var renderer in renderers)
-                    {
-                        var materialColor = renderer.material.color;
-                        materialColor.a = 0.3f;
-                        renderer.material.color = materialColor;
-                    }
-
-                    var bColliders = flower.GetComponentsInChildren<BoxCollider2D>();
-                    
-                    foreach (var boxCollider2D in bColliders)
-                    {
-                        boxCollider2D.enabled = false;
-                    }
-
-
-                });
-                layer2Flowers.ForEach(flower =>
-                {
-                    var renderers = flower.GetComponentsInChildren<Renderer>();
-                    
-                    foreach (var renderer in renderers)
-                    {
-                        var materialColor = renderer.material.color;
-                        materialColor.a = 1.0f;
-                        renderer.material.color = materialColor;
-                    }
-                    
-                    var bColliders = flower.GetComponentsInChildren<BoxCollider2D>();
-                    
-                    foreach (var boxCollider2D in bColliders)
-                    {
-                        boxCollider2D.enabled = true;
-                    }
-                    
-                    
-                });
-            }
-            
-        }
         
         if (gameOn)
         {
+            
             manageLayer1();
             manageLayer2();
             
@@ -259,6 +175,43 @@ public class Game : MonoBehaviour
                 speed += speedIncrement;
                 timeSinceSpeedChange = 0f;
             }
+            
+            
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                layer1Active = !layer1Active; // flip the active layer
+            
+                if (layer1Active)
+                {
+                
+                    layer1Flowers.ForEach(flower =>
+                    {
+                        
+                        setAlphaAndCollision(flower, true);
+
+                    });
+                    layer2Flowers.ForEach(flower =>
+                    {
+                      setAlphaAndCollision(flower,false);
+                    
+                    });
+                }
+                else // layer 2 active
+                {
+                
+                    layer1Flowers.ForEach(flower =>
+                    {
+                       setAlphaAndCollision(flower,false);
+
+
+                    });
+                    layer2Flowers.ForEach(flower =>
+                    {
+                        setAlphaAndCollision(flower,true);
+                    
+                    });
+                }   
+            }
         }      
 
     } 
@@ -268,7 +221,7 @@ public class Game : MonoBehaviour
         float multiplier = Random.Range(-5f, 0f);
 
         GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
-        float randomDistance = Random.Range(5, 15);        
+        float randomDistance = Random.Range(0, 10);        
         Vector3 fPos =  new Vector3(15 + randomDistance, multiplier, 0f);
         GameObject flower = Instantiate(randomFlowerPrefab, fPos,Quaternion.identity);
         return flower;
@@ -276,6 +229,9 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
+        yield return new WaitForSeconds(1.5f);
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
         text.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
@@ -284,13 +240,14 @@ public class Game : MonoBehaviour
     }
     public void Restart()
     {
-       // Time.timeScale = 0;
+        
         gameOn = false;
-        foreach (GameObject flower in layer1Flowers)
+        StartCoroutine(Example());
+       /* foreach (GameObject flower in layer1Flowers)
         {
             GameObject.Destroy(flower);
-        }
-        StartCoroutine(Example());
+        }*/
+        
        
     }
 
