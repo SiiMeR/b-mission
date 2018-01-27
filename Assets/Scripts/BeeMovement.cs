@@ -49,4 +49,10 @@ public class BeeMovement : MonoBehaviour {
         bottomBorder = Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f, 0f)).x + (beeSize.y / 2);
         topBorder = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, 0f)).x - (beeSize.y / 2);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        this.transform.position = new Vector3(transform.position.x, 5, 0);
+        Game.instance.Restart();
+
+    }
 }
