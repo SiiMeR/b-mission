@@ -51,7 +51,7 @@ public class BeeMovement : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        this.transform.position = new Vector3(transform.position.x, 5, 0);
+        this.transform.position = new Vector3(-8    , 3, 0);
         Game.instance.Restart();
 
     }

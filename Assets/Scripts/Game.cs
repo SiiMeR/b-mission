@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -246,7 +247,7 @@ public class Game : MonoBehaviour
                 speed += speedIncrement;
                 timeSinceSpeedChange = 0f;
             }
-        }        
+        }======        
 
     } 
 
@@ -266,13 +267,14 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
-        print("siin");
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
     public void Restart()
     {
+        Time.timeScale = 0;
         gameOn = false;
         foreach (GameObject flower in layer1Flowers)
         {
