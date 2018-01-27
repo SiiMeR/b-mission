@@ -39,11 +39,15 @@ public class BeeManager : MonoBehaviour
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		GameObject otherObject = other.gameObject;
+		
 
 		if (otherObject.GetComponent<FlowerController>())
 		{
 			AudioManager.instance.Play("PollinateSound");
 			beeAnimator.SetTrigger("PollenPick");
+			
+			
+			
 
 			bool equals = false;
 			PollenColor flowerColor = PollenColor.NONE;
