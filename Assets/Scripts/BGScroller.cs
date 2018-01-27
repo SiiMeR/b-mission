@@ -42,7 +42,7 @@ public class BGScroller : MonoBehaviour {
         foreach (Transform child in transform)
         {
             float newX = child.position.x - scrollSpeed * Time.deltaTime;
-            if (newX < -tileSize.x - worldScreenWidth / 2.0f)//child.GetComponent<SpriteRenderer>().sprite.bounds.size.x * worldScreenHeight / child.GetComponent<SpriteRenderer>().sprite.bounds.size.y - child.GetComponent<SpriteRenderer>().sprite.bounds.size.x)
+            if (newX < -tileSize.x - worldScreenWidth / 2.0f)
             {
                 Destroy(child.gameObject);
 
