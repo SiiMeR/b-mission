@@ -8,6 +8,7 @@ TagManager:
   - BlueFlower
   - PurpleFlower
   - RedFlower
+  - pollinated
   layers:
   - Default
   - TransparentFX

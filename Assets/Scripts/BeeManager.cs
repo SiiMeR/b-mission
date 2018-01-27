@@ -17,13 +17,15 @@ public class BeeManager : MonoBehaviour
 	private Animator beeAnimator;
 	
 	private int currentScore = 0;
-    private GameObject lastFlower = null;
+  //  private GameObject lastFlower = null;
 
 	public int CurrentScore
 	{
 		get { return currentScore; }
 		set { currentScore = value; }
 	}
+	
+	
     [SerializeField] public Text punText;
     public string[] puns;
 
@@ -40,7 +42,7 @@ public class BeeManager : MonoBehaviour
 	{
 		GameObject otherObject = other.gameObject;
 
-		if (otherObject.GetComponent<FlowerController>() && lastFlower != otherObject)
+		if (otherObject.GetComponent<FlowerController>())
 		{
 			beeAnimator.SetTrigger("PollenPick");
 
@@ -105,8 +107,9 @@ public class BeeManager : MonoBehaviour
 				}
 			}
 
-            lastFlower = otherObject;
+      //      lastFlower = otherObject;
 		//	Destroy(gameObject);
+			Destroy(otherObject.GetComponent<FlowerController>());
 		}
 	}
 
