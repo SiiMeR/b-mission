@@ -21,6 +21,10 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+        musicVolume = PlayerPrefs.GetFloat("MusicVol");
+        soundVolume = PlayerPrefs.GetFloat("SoundVol");
+        print("adoaiwdja " + PlayerPrefs.GetFloat("SoundVol"));
+        
         audioMap = new Dictionary<string, AudioClip>();
 
         foreach (AudioClip clip in audioClips)

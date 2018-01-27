@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
 
 	[SerializeField] private GameObject audioModal;
 	[SerializeField] private GameObject guideModal;
+
+	[SerializeField] private Slider music;
+	[SerializeField] private Slider sound;
 	
 	// Use this for initialization
 	void Start () {
@@ -32,6 +36,16 @@ public class MenuController : MonoBehaviour
 	public void OnAudioClicked()
 	{
 		audioModal.SetActive(true);
+	}
+
+	public void OnMusicValueChanged()
+	{
+		PlayerPrefs.SetFloat("MusicVol", music.value);
+	}
+	
+	public void OnSoundValueChanged()
+	{
+		PlayerPrefs.SetFloat("SoundVol", sound.value);
 	}
 
 
