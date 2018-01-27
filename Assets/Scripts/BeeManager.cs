@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeeManager : MonoBehaviour
 {
@@ -23,7 +24,8 @@ public class BeeManager : MonoBehaviour
 		get { return currentScore; }
 		set { currentScore = value; }
 	}
-
+    [SerializeField] public Text punText;
+    public string[] puns;
 
 	void Start()
 	{
@@ -77,7 +79,12 @@ public class BeeManager : MonoBehaviour
 			if (equals)
 			{
 				CurrentScore += 10;
-				currentPollenColor = PollenColor.NONE;
+                if (puns.Length > 0)
+                {
+                    punText.text = puns[Random.Range(0, puns.Length)];
+                    Invoke("RemovePun", 3);
+                }
+                currentPollenColor = PollenColor.NONE;
 				beeAnimator.SetTrigger("DropPollen");
 			}
 			else
@@ -102,4 +109,9 @@ public class BeeManager : MonoBehaviour
 		//	Destroy(gameObject);
 		}
 	}
+
+    void RemovePun()
+    {
+        punText.text = "";
+    }
 }
