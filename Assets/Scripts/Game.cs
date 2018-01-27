@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class Game : MonoBehaviour
 {
     public static Game instance;
+    public GameObject gameOverPanel;    
     private float timeSpent;
     private float timeSinceSpeedChange;
 
@@ -19,6 +21,8 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        Example();
+        gameOverPanel.SetActive(false);
         FLOWER_COOLDOWN /=speed;
         flowers = new List<GameObject>();
         instance = this;
@@ -59,17 +63,21 @@ public class Game : MonoBehaviour
         }
 
     }
-    private void OnBecameInvisible()
+    IEnumerator Example()
     {
-        
+        print("siin");
+        yield return new WaitUntil(() =>Input.GetKeyDown("return"));
+        Start();
+
     }
     public void Restart()
     {
+        StartCoroutine(Example());
+        gameOverPanel.SetActive(true);
         foreach (GameObject flower in flowers)
         {
             GameObject.Destroy(flower);
         }
-        Start();
     }
 
 
