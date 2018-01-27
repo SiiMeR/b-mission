@@ -25,15 +25,8 @@ public class FlowerController : MonoBehaviour
 		{
 			
 			BeeManager bm = GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>();
-			
-			if (bm.CurrentPollen == pollenPrefab)
-			{
-				bm.CurrentScore += SCORE_PICK;
-				bm.CurrentPollen = null;
-			}
-			bm.CurrentPollen = pollenPrefab;
-			bm.CurrentPollen.SetActive(true);
-		//		Destroy(gameObject);
+			bm.CurrentScore += SCORE_PICK;
+
 		}
 
 	}

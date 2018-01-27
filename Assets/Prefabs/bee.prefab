@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50087235458563636}
   - component: {fileID: 58168422048438424}
   - component: {fileID: 95682719088607532}
+  - component: {fileID: 114970883381360840}
   m_Layer: 0
   m_Name: bee
   m_TagString: Player
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1757152228638480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.31, y: 0, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,6 +109,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bee_speed: 15
+--- !u!114 &114970883381360840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757152228638480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d0d673d47783649bfae4c1abcbd5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BluePollenAnimation: {fileID: 9100000, guid: 36e54407c519d1e47be13c1e70a068d2, type: 2}
+  RedPollenAnimation: {fileID: 9100000, guid: 750bcdbffa73a8842a21b0b2af6689d2, type: 2}
+  PurplePollenAnimation: {fileID: 9100000, guid: 1898c9bd9798a6e48b40d9124c251178,
+    type: 2}
 --- !u!212 &212768840517375174
 SpriteRenderer:
   m_ObjectHideFlags: 1

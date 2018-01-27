@@ -46,13 +46,5 @@ public class Game : MonoBehaviour
 
     }
 
-    public void Restart()
-    {
-        foreach (GameObject tree in flowers)
-        {
-            Destroy(tree);
-        }
-        Start();
-    }
 
 }
