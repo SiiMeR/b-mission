@@ -274,7 +274,7 @@ public class Game : MonoBehaviour
     }
     public void Restart()
     {
-        Time.timeScale = 0;
+       // Time.timeScale = 0;
         gameOn = false;
         foreach (GameObject flower in layer1Flowers)
         {
