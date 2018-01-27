@@ -1,0 +1,1551 @@
+[1mdiff --git a/Assets/Animations/BeePollinate.anim b/Assets/Animations/BeePollinate.anim[m
+[1mindex 8de3379..8789f5c 100644[m
+[1m--- a/Assets/Animations/BeePollinate.anim[m
+[1m+++ b/Assets/Animations/BeePollinate.anim[m
+[36m@@ -20,17 +20,17 @@[m [mAnimationClip:[m
+   - curve:[m
+     - time: 0[m
+       value: {fileID: 21300000, guid: 3bd2ec96cd8b119408f657097a9c3bb0, type: 3}[m
+[31m-    - time: 0.083333336[m
+[31m-      value: {fileID: 21300002, guid: 3bd2ec96cd8b119408f657097a9c3bb0, type: 3}[m
+     - time: 0.16666667[m
+[32m+[m[32m      value: {fileID: 21300002, guid: 3bd2ec96cd8b119408f657097a9c3bb0, type: 3}[m
+[32m+[m[32m    - time: 0.33333334[m
+       value: {fileID: 21300004, guid: 3bd2ec96cd8b119408f657097a9c3bb0, type: 3}[m
+[31m-    - time: 0.25[m
+[32m+[m[32m    - time: 0.5[m
+       value: {fileID: 21300006, guid: 3bd2ec96cd8b119408f657097a9c3bb0, type: 3}[m
+     attribute: m_Sprite[m
+     path: [m
+     classID: 212[m
+     script: {fileID: 0}[m
+[31m-  m_SampleRate: 12[m
+[32m+[m[32m  m_SampleRate: 6[m
+   m_WrapMode: 0[m
+   m_Bounds:[m
+     m_Center: {x: 0, y: 0, z: 0}[m
+[36m@@ -54,7 +54,7 @@[m [mAnimationClip:[m
+     m_AdditiveReferencePoseClip: {fileID: 0}[m
+     m_AdditiveReferencePoseTime: 0[m
+     m_StartTime: 0[m
+[31m-    m_StopTime: 0.33333334[m
+[32m+[m[32m    m_StopTime: 0.6666667[m
+     m_OrientationOffsetY: 0[m
+     m_Level: 0[m
+     m_CycleOffset: 0[m
+[1mdiff --git a/Assets/Animations/BeePollinate_0.controller b/Assets/Animations/BeePollinate_0.controller[m
+[1mindex 4d07983..5366215 100644[m
+[1m--- a/Assets/Animations/BeePollinate_0.controller[m
+[1m+++ b/Assets/Animations/BeePollinate_0.controller[m
+[36m@@ -7,7 +7,13 @@[m [mAnimatorController:[m
+   m_PrefabInternal: {fileID: 0}[m
+   m_Name: BeePollinate_0[m
+   serializedVersion: 5[m
+[31m-  m_AnimatorParameters: [][m
+[32m+[m[32m  m_AnimatorParameters:[m
+[32m+[m[32m  - m_Name: PollenPick[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+   m_AnimatorLayers:[m
+   - serializedVersion: 5[m
+     m_Name: Base Layer[m
+[1mdiff --git a/Assets/Animations/BluePollen.anim b/Assets/Animations/BluePollen.anim[m
+[1mindex 0e59ebf..6c28eb3 100644[m
+[1m--- a/Assets/Animations/BluePollen.anim[m
+[1m+++ b/Assets/Animations/BluePollen.anim[m
+[36m@@ -20,25 +20,25 @@[m [mAnimationClip:[m
+   - curve:[m
+     - time: 0[m
+       value: {fileID: 21300000, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.14285715[m
+[32m+[m[32m    - time: 0.083333336[m
+       value: {fileID: 21300002, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.2857143[m
+[32m+[m[32m    - time: 0.16666667[m
+       value: {fileID: 21300004, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.42857143[m
+[32m+[m[32m    - time: 0.25[m
+       value: {fileID: 21300006, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.5714286[m
+[32m+[m[32m    - time: 0.33333334[m
+       value: {fileID: 21300008, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.71428573[m
+[32m+[m[32m    - time: 0.41666666[m
+       value: {fileID: 21300010, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 0.85714287[m
+[32m+[m[32m    - time: 0.5[m
+       value: {fileID: 21300012, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+[31m-    - time: 1[m
+[32m+[m[32m    - time: 0.5833333[m
+       value: {fileID: 21300014, guid: eca81840f60d5a94a934e12883c6812a, type: 3}[m
+     attribute: m_Sprite[m
+     path: [m
+     classID: 212[m
+     script: {fileID: 0}[m
+[31m-  m_SampleRate: 7[m
+[32m+[m[32m  m_SampleRate: 12[m
+   m_WrapMode: 0[m
+   m_Bounds:[m
+     m_Center: {x: 0, y: 0, z: 0}[m
+[36m@@ -66,7 +66,7 @@[m [mAnimationClip:[m
+     m_AdditiveReferencePoseClip: {fileID: 0}[m
+     m_AdditiveReferencePoseTime: 0[m
+     m_StartTime: 0[m
+[31m-    m_StopTime: 1.1428572[m
+[32m+[m[32m    m_StopTime: 0.6666666[m
+     m_OrientationOffsetY: 0[m
+     m_Level: 0[m
+     m_CycleOffset: 0[m
+[1mdiff --git a/Assets/Animations/BluePollen.anim.meta b/Assets/Animations/BluePollen.anim.meta[m
+[1mindex 3aa3eab..ce2786d 100644[m
+[1m--- a/Assets/Animations/BluePollen.anim.meta[m
+[1m+++ b/Assets/Animations/BluePollen.anim.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: 9d28adc51d9e9ec449e4e071caab18c5[m
+[31m-timeCreated: 1517037207[m
+[32m+[m[32mtimeCreated: 1517045885[m
+ licenseType: Free[m
+ NativeFormatImporter:[m
+   externalObjects: {}[m
+[1mdiff --git a/Assets/Animations/BluePollen_0.controller b/Assets/Animations/BluePollen_0.controller[m
+[1mindex 384fb1f..198ffa0 100644[m
+[1m--- a/Assets/Animations/BluePollen_0.controller[m
+[1m+++ b/Assets/Animations/BluePollen_0.controller[m
+[36m@@ -11,7 +11,7 @@[m [mAnimatorController:[m
+   m_AnimatorLayers:[m
+   - serializedVersion: 5[m
+     m_Name: Base Layer[m
+[31m-    m_StateMachine: {fileID: 1107371961702080016}[m
+[32m+[m[32m    m_StateMachine: {fileID: 1107144226589048306}[m
+     m_Mask: {fileID: 0}[m
+     m_Motions: [][m
+     m_Behaviours: [][m
+[36m@@ -21,7 +21,7 @@[m [mAnimatorController:[m
+     m_IKPass: 0[m
+     m_SyncedLayerAffectsTiming: 0[m
+     m_Controller: {fileID: 9100000}[m
+[31m---- !u!1102 &1102854408102516282[m
+[32m+[m[32m--- !u!1102 &1102103002485073492[m
+ AnimatorState:[m
+   serializedVersion: 5[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -46,7 +46,7 @@[m [mAnimatorState:[m
+   m_MirrorParameter: [m
+   m_CycleOffsetParameter: [m
+   m_TimeParameter: [m
+[31m---- !u!1107 &1107371961702080016[m
+[32m+[m[32m--- !u!1107 &1107144226589048306[m
+ AnimatorStateMachine:[m
+   serializedVersion: 5[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -55,7 +55,7 @@[m [mAnimatorStateMachine:[m
+   m_Name: Base Layer[m
+   m_ChildStates:[m
+   - serializedVersion: 1[m
+[31m-    m_State: {fileID: 1102854408102516282}[m
+[32m+[m[32m    m_State: {fileID: 1102103002485073492}[m
+     m_Position: {x: 200, y: 0, z: 0}[m
+   m_ChildStateMachines: [][m
+   m_AnyStateTransitions: [][m
+[36m@@ -66,4 +66,4 @@[m [mAnimatorStateMachine:[m
+   m_EntryPosition: {x: 50, y: 120, z: 0}[m
+   m_ExitPosition: {x: 800, y: 120, z: 0}[m
+   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}[m
+[31m-  m_DefaultState: {fileID: 1102854408102516282}[m
+[32m+[m[32m  m_DefaultState: {fileID: 1102103002485073492}[m
+[1mdiff --git a/Assets/Animations/BluePollen_0.controller.meta b/Assets/Animations/BluePollen_0.controller.meta[m
+[1mindex 05e5154..d75f1ab 100644[m
+[1m--- a/Assets/Animations/BluePollen_0.controller.meta[m
+[1m+++ b/Assets/Animations/BluePollen_0.controller.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+[31m-guid: 36e54407c519d1e47be13c1e70a068d2[m
+[31m-timeCreated: 1517037207[m
+[32m+[m[32mguid: 0137907c08298e4429e328fd834a2dc5[m
+[32m+[m[32mtimeCreated: 1517045885[m
+ licenseType: Free[m
+ NativeFormatImporter:[m
+   externalObjects: {}[m
+[1mdiff --git a/Assets/Animations/PurplePollen.anim b/Assets/Animations/PurplePollen.anim[m
+[1mindex 84b85de..0d05c34 100644[m
+[1m--- a/Assets/Animations/PurplePollen.anim[m
+[1m+++ b/Assets/Animations/PurplePollen.anim[m
+[36m@@ -20,25 +20,25 @@[m [mAnimationClip:[m
+   - curve:[m
+     - time: 0[m
+       value: {fileID: 21300000, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.14285715[m
+[32m+[m[32m    - time: 0.083333336[m
+       value: {fileID: 21300002, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.2857143[m
+[32m+[m[32m    - time: 0.16666667[m
+       value: {fileID: 21300004, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.42857143[m
+[32m+[m[32m    - time: 0.25[m
+       value: {fileID: 21300006, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.5714286[m
+[32m+[m[32m    - time: 0.33333334[m
+       value: {fileID: 21300008, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.71428573[m
+[32m+[m[32m    - time: 0.41666666[m
+       value: {fileID: 21300010, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 0.85714287[m
+[32m+[m[32m    - time: 0.5[m
+       value: {fileID: 21300012, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+[31m-    - time: 1[m
+[32m+[m[32m    - time: 0.5833333[m
+       value: {fileID: 21300014, guid: 3fa1aa85d3b69dd42b41cb54499126c1, type: 3}[m
+     attribute: m_Sprite[m
+     path: [m
+     classID: 212[m
+     script: {fileID: 0}[m
+[31m-  m_SampleRate: 7[m
+[32m+[m[32m  m_SampleRate: 12[m
+   m_WrapMode: 0[m
+   m_Bounds:[m
+     m_Center: {x: 0, y: 0, z: 0}[m
+[36m@@ -66,7 +66,7 @@[m [mAnimationClip:[m
+     m_AdditiveReferencePoseClip: {fileID: 0}[m
+     m_AdditiveReferencePoseTime: 0[m
+     m_StartTime: 0[m
+[31m-    m_StopTime: 1.1428572[m
+[32m+[m[32m    m_StopTime: 0.6666666[m
+     m_OrientationOffsetY: 0[m
+     m_Level: 0[m
+     m_CycleOffset: 0[m
+[1mdiff --git a/Assets/Animations/PurplePollen.anim.meta b/Assets/Animations/PurplePollen.anim.meta[m
+[1mindex b88230c..bb349b7 100644[m
+[1m--- a/Assets/Animations/PurplePollen.anim.meta[m
+[1m+++ b/Assets/Animations/PurplePollen.anim.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: 755c89c76b67964489bf41f9466fc171[m
+[31m-timeCreated: 1517037221[m
+[32m+[m[32mtimeCreated: 1517045819[m
+ licenseType: Free[m
+ NativeFormatImporter:[m
+   externalObjects: {}[m
+[1mdiff --git a/Assets/Animations/PurplePollen_0.controller b/Assets/Animations/PurplePollen_0.controller[m
+[1mdeleted file mode 100644[m
+[1mindex 064ef30..0000000[m
+[1m--- a/Assets/Animations/PurplePollen_0.controller[m
+[1m+++ /dev/null[m
+[36m@@ -1,69 +0,0 @@[m
+[31m-%YAML 1.1[m
+[31m-%TAG !u! tag:unity3d.com,2011:[m
+[31m---- !u!91 &9100000[m
+[31m-AnimatorController:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 0}[m
+[31m-  m_Name: PurplePollen_0[m
+[31m-  serializedVersion: 5[m
+[31m-  m_AnimatorParameters: [][m
+[31m-  m_AnimatorLayers:[m
+[31m-  - serializedVersion: 5[m
+[31m-    m_Name: Base Layer[m
+[31m-    m_StateMachine: {fileID: 1107685544497607658}[m
+[31m-    m_Mask: {fileID: 0}[m
+[31m-    m_Motions: [][m
+[31m-    m_Behaviours: [][m
+[31m-    m_BlendingMode: 0[m
+[31m-    m_SyncedLayerIndex: -1[m
+[31m-    m_DefaultWeight: 0[m
+[31m-    m_IKPass: 0[m
+[31m-    m_SyncedLayerAffectsTiming: 0[m
+[31m-    m_Controller: {fileID: 9100000}[m
+[31m---- !u!1102 &1102334515242107030[m
+[31m-AnimatorState:[m
+[31m-  serializedVersion: 5[m
+[31m-  m_ObjectHideFlags: 1[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 0}[m
+[31m-  m_Name: PurplePollen[m
+[31m-  m_Speed: 1[m
+[31m-  m_CycleOffset: 0[m
+[31m-  m_Transitions: [][m
+[31m-  m_StateMachineBehaviours: [][m
+[31m-  m_Position: {x: 50, y: 50, z: 0}[m
+[31m-  m_IKOnFeet: 0[m
+[31m-  m_WriteDefaultValues: 1[m
+[31m-  m_Mirror: 0[m
+[31m-  m_SpeedParameterActive: 0[m
+[31m-  m_MirrorParameterActive: 0[m
+[31m-  m_CycleOffsetParameterActive: 0[m
+[31m-  m_TimeParameterActive: 0[m
+[31m-  m_Motion: {fileID: 7400000, guid: 755c89c76b67964489bf41f9466fc171, type: 2}[m
+[31m-  m_Tag: [m
+[31m-  m_SpeedParameter: [m
+[31m-  m_MirrorParameter: [m
+[31m-  m_CycleOffsetParameter: [m
+[31m-  m_TimeParameter: [m
+[31m---- !u!1107 &1107685544497607658[m
+[31m-AnimatorStateMachine:[m
+[31m-  serializedVersion: 5[m
+[31m-  m_ObjectHideFlags: 1[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 0}[m
+[31m-  m_Name: Base Layer[m
+[31m-  m_ChildStates:[m
+[31m-  - serializedVersion: 1[m
+[31m-    m_State: {fileID: 1102334515242107030}[m
+[31m-    m_Position: {x: 200, y: 0, z: 0}[m
+[31m-  m_ChildStateMachines: [][m
+[31m-  m_AnyStateTransitions: [][m
+[31m-  m_EntryTransitions: [][m
+[31m-  m_StateMachineTransitions: {}[m
+[31m-  m_StateMachineBehaviours: [][m
+[31m-  m_AnyStatePosition: {x: 50, y: 20, z: 0}[m
+[31m-  m_EntryPosition: {x: 50, y: 120, z: 0}[m
+[31m-  m_ExitPosition: {x: 800, y: 120, z: 0}[m
+[31m-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}[m
+[31m-  m_DefaultState: {fileID: 1102334515242107030}[m
+[1mdiff --git a/Assets/Animations/PurplePollen_0.controller.meta b/Assets/Animations/PurplePollen_0.controller.meta[m
+[1mdeleted file mode 100644[m
+[1mindex 2e3875b..0000000[m
+[1m--- a/Assets/Animations/PurplePollen_0.controller.meta[m
+[1m+++ /dev/null[m
+[36m@@ -1,10 +0,0 @@[m
+[31m-fileFormatVersion: 2[m
+[31m-guid: 1898c9bd9798a6e48b40d9124c251178[m
+[31m-timeCreated: 1517037222[m
+[31m-licenseType: Free[m
+[31m-NativeFormatImporter:[m
+[31m-  externalObjects: {}[m
+[31m-  mainObjectFileID: 9100000[m
+[31m-  userData: [m
+[31m-  assetBundleName: [m
+[31m-  assetBundleVariant: [m
+[1mdiff --git a/Assets/Animations/RedPollen.anim b/Assets/Animations/RedPollen.anim[m
+[1mindex 70a42b7..d90a9f7 100644[m
+[1m--- a/Assets/Animations/RedPollen.anim[m
+[1m+++ b/Assets/Animations/RedPollen.anim[m
+[36m@@ -20,25 +20,25 @@[m [mAnimationClip:[m
+   - curve:[m
+     - time: 0[m
+       value: {fileID: 21300000, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.14285715[m
+[32m+[m[32m    - time: 0.083333336[m
+       value: {fileID: 21300002, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.2857143[m
+[32m+[m[32m    - time: 0.16666667[m
+       value: {fileID: 21300004, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.42857143[m
+[32m+[m[32m    - time: 0.25[m
+       value: {fileID: 21300006, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.5714286[m
+[32m+[m[32m    - time: 0.33333334[m
+       value: {fileID: 21300008, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.71428573[m
+[32m+[m[32m    - time: 0.41666666[m
+       value: {fileID: 21300010, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 0.85714287[m
+[32m+[m[32m    - time: 0.5[m
+       value: {fileID: 21300012, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+[31m-    - time: 1[m
+[32m+[m[32m    - time: 0.5833333[m
+       value: {fileID: 21300014, guid: d350df351a6a84f4ba36acb5c1107728, type: 3}[m
+     attribute: m_Sprite[m
+     path: [m
+     classID: 212[m
+     script: {fileID: 0}[m
+[31m-  m_SampleRate: 7[m
+[32m+[m[32m  m_SampleRate: 12[m
+   m_WrapMode: 0[m
+   m_Bounds:[m
+     m_Center: {x: 0, y: 0, z: 0}[m
+[36m@@ -66,7 +66,7 @@[m [mAnimationClip:[m
+     m_AdditiveReferencePoseClip: {fileID: 0}[m
+     m_AdditiveReferencePoseTime: 0[m
+     m_StartTime: 0[m
+[31m-    m_StopTime: 1.1428572[m
+[32m+[m[32m    m_StopTime: 0.6666666[m
+     m_OrientationOffsetY: 0[m
+     m_Level: 0[m
+     m_CycleOffset: 0[m
+[1mdiff --git a/Assets/Animations/RedPollen.anim.meta b/Assets/Animations/RedPollen.anim.meta[m
+[1mindex b2341e3..aec44bb 100644[m
+[1m--- a/Assets/Animations/RedPollen.anim.meta[m
+[1m+++ b/Assets/Animations/RedPollen.anim.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: 0fbdc926d87c1b6438aeac19556cbb90[m
+[31m-timeCreated: 1517037238[m
+[32m+[m[32mtimeCreated: 1517045874[m
+ licenseType: Free[m
+ NativeFormatImporter:[m
+   externalObjects: {}[m
+[1mdiff --git a/Assets/Animations/RedPollen_0.controller b/Assets/Animations/RedPollen_0.controller[m
+[1mindex 454a81c..ff375ab 100644[m
+[1m--- a/Assets/Animations/RedPollen_0.controller[m
+[1m+++ b/Assets/Animations/RedPollen_0.controller[m
+[36m@@ -11,7 +11,7 @@[m [mAnimatorController:[m
+   m_AnimatorLayers:[m
+   - serializedVersion: 5[m
+     m_Name: Base Layer[m
+[31m-    m_StateMachine: {fileID: 1107165670510852708}[m
+[32m+[m[32m    m_StateMachine: {fileID: 1107294611339492480}[m
+     m_Mask: {fileID: 0}[m
+     m_Motions: [][m
+     m_Behaviours: [][m
+[36m@@ -21,7 +21,7 @@[m [mAnimatorController:[m
+     m_IKPass: 0[m
+     m_SyncedLayerAffectsTiming: 0[m
+     m_Controller: {fileID: 9100000}[m
+[31m---- !u!1102 &1102097562881898178[m
+[32m+[m[32m--- !u!1102 &1102333161173181956[m
+ AnimatorState:[m
+   serializedVersion: 5[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -46,7 +46,7 @@[m [mAnimatorState:[m
+   m_MirrorParameter: [m
+   m_CycleOffsetParameter: [m
+   m_TimeParameter: [m
+[31m---- !u!1107 &1107165670510852708[m
+[32m+[m[32m--- !u!1107 &1107294611339492480[m
+ AnimatorStateMachine:[m
+   serializedVersion: 5[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -55,7 +55,7 @@[m [mAnimatorStateMachine:[m
+   m_Name: Base Layer[m
+   m_ChildStates:[m
+   - serializedVersion: 1[m
+[31m-    m_State: {fileID: 1102097562881898178}[m
+[32m+[m[32m    m_State: {fileID: 1102333161173181956}[m
+     m_Position: {x: 200, y: 0, z: 0}[m
+   m_ChildStateMachines: [][m
+   m_AnyStateTransitions: [][m
+[36m@@ -66,4 +66,4 @@[m [mAnimatorStateMachine:[m
+   m_EntryPosition: {x: 50, y: 120, z: 0}[m
+   m_ExitPosition: {x: 800, y: 120, z: 0}[m
+   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}[m
+[31m-  m_DefaultState: {fileID: 1102097562881898178}[m
+[32m+[m[32m  m_DefaultState: {fileID: 1102333161173181956}[m
+[1mdiff --git a/Assets/Animations/RedPollen_0.controller.meta b/Assets/Animations/RedPollen_0.controller.meta[m
+[1mindex 86fb491..b787a74 100644[m
+[1m--- a/Assets/Animations/RedPollen_0.controller.meta[m
+[1m+++ b/Assets/Animations/RedPollen_0.controller.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+[31m-guid: 750bcdbffa73a8842a21b0b2af6689d2[m
+[31m-timeCreated: 1517037238[m
+[32m+[m[32mguid: 55f5cccfefb81a6468db109fe85bd8a8[m
+[32m+[m[32mtimeCreated: 1517045875[m
+ licenseType: Free[m
+ NativeFormatImporter:[m
+   externalObjects: {}[m
+[1mdiff --git a/Assets/Animations/bee.controller b/Assets/Animations/bee.controller[m
+[1mindex 4f5d8a7..54dd389 100644[m
+[1m--- a/Assets/Animations/bee.controller[m
+[1m+++ b/Assets/Animations/bee.controller[m
+[36m@@ -7,7 +7,37 @@[m [mAnimatorController:[m
+   m_PrefabInternal: {fileID: 0}[m
+   m_Name: bee[m
+   serializedVersion: 5[m
+[31m-  m_AnimatorParameters: [][m
+[32m+[m[32m  m_AnimatorParameters:[m
+[32m+[m[32m  - m_Name: PollenPick[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+[32m+[m[32m  - m_Name: Purple[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+[32m+[m[32m  - m_Name: Blue[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+[32m+[m[32m  - m_Name: Red[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+[32m+[m[32m  - m_Name: DropPollen[m
+[32m+[m[32m    m_Type: 9[m
+[32m+[m[32m    m_DefaultFloat: 0[m
+[32m+[m[32m    m_DefaultInt: 0[m
+[32m+[m[32m    m_DefaultBool: 0[m
+[32m+[m[32m    m_Controller: {fileID: 0}[m
+   m_AnimatorLayers:[m
+   - serializedVersion: 5[m
+     m_Name: Base Layer[m
+[36m@@ -21,6 +51,198 @@[m [mAnimatorController:[m
+     m_IKPass: 0[m
+     m_SyncedLayerAffectsTiming: 0[m
+     m_Controller: {fileID: 9100000}[m
+[32m+[m[32m--- !u!1101 &1101026935496693918[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: DropPollen[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102167365566892858}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.625[m
+[32m+[m[32m  m_HasExitTime: 1[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101058646041541924[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: Purple[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102642844950371336}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.625[m
+[32m+[m[32m  m_HasExitTime: 1[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101512868802904668[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: PollenPick[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102356774418034510}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.78125[m
+[32m+[m[32m  m_HasExitTime: 0[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101594260271225340[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: PollenPick[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102356774418034510}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.78125[m
+[32m+[m[32m  m_HasExitTime: 0[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101594754130757372[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: PollenPick[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102356774418034510}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.78125[m
+[32m+[m[32m  m_HasExitTime: 0[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101771084943012918[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: Red[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102745129019658780}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.625[m
+[32m+[m[32m  m_HasExitTime: 1[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101966887276069150[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: PollenPick[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102356774418034510}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.78125[m
+[32m+[m[32m  m_HasExitTime: 0[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+[32m+[m[32m--- !u!1101 &1101999430048093034[m
+[32m+[m[32mAnimatorStateTransition:[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name:[m[41m [m
+[32m+[m[32m  m_Conditions:[m
+[32m+[m[32m  - m_ConditionMode: 1[m
+[32m+[m[32m    m_ConditionEvent: Blue[m
+[32m+[m[32m    m_EventTreshold: 0[m
+[32m+[m[32m  m_DstStateMachine: {fileID: 0}[m
+[32m+[m[32m  m_DstState: {fileID: 1102488936649770068}[m
+[32m+[m[32m  m_Solo: 0[m
+[32m+[m[32m  m_Mute: 0[m
+[32m+[m[32m  m_IsExit: 0[m
+[32m+[m[32m  serializedVersion: 3[m
+[32m+[m[32m  m_TransitionDuration: 0.25[m
+[32m+[m[32m  m_TransitionOffset: 0[m
+[32m+[m[32m  m_ExitTime: 0.625[m
+[32m+[m[32m  m_HasExitTime: 1[m
+[32m+[m[32m  m_HasFixedDuration: 1[m
+[32m+[m[32m  m_InterruptionSource: 0[m
+[32m+[m[32m  m_OrderedInterruption: 1[m
+[32m+[m[32m  m_CanTransitionToSelf: 1[m
+ --- !u!1102 &1102167365566892858[m
+ AnimatorState:[m
+   serializedVersion: 5[m
+[36m@@ -30,7 +252,8 @@[m [mAnimatorState:[m
+   m_Name: Bee-animation[m
+   m_Speed: 1[m
+   m_CycleOffset: 0[m
+[31m-  m_Transitions: [][m
+[32m+[m[32m  m_Transitions:[m
+[32m+[m[32m  - {fileID: 1101966887276069150}[m
+   m_StateMachineBehaviours: [][m
+   m_Position: {x: 50, y: 50, z: 0}[m
+   m_IKOnFeet: 0[m
+[36m@@ -46,6 +269,113 @@[m [mAnimatorState:[m
+   m_MirrorParameter: [m
+   m_CycleOffsetParameter: [m
+   m_TimeParameter: [m
+[32m+[m[32m--- !u!1102 &1102356774418034510[m
+[32m+[m[32mAnimatorState:[m
+[32m+[m[32m  serializedVersion: 5[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name: BeePollinate[m
+[32m+[m[32m  m_Speed: 1[m
+[32m+[m[32m  m_CycleOffset: 0[m
+[32m+[m[32m  m_Transitions:[m
+[32m+[m[32m  - {fileID: 1101999430048093034}[m
+[32m+[m[32m  - {fileID: 1101058646041541924}[m
+[32m+[m[32m  - {fileID: 1101771084943012918}[m
+[32m+[m[32m  - {fileID: 1101026935496693918}[m
+[32m+[m[32m  m_StateMachineBehaviours: [][m
+[32m+[m[32m  m_Position: {x: 50, y: 50, z: 0}[m
+[32m+[m[32m  m_IKOnFeet: 0[m
+[32m+[m[32m  m_WriteDefaultValues: 1[m
+[32m+[m[32m  m_Mirror: 0[m
+[32m+[m[32m  m_SpeedParameterActive: 0[m
+[32m+[m[32m  m_MirrorParameterActive: 0[m
+[32m+[m[32m  m_CycleOffsetParameterActive: 0[m
+[32m+[m[32m  m_TimeParameterActive: 0[m
+[32m+[m[32m  m_Motion: {fileID: 7400000, guid: 7af3382d63b7bfa4da955862508b3c99, type: 2}[m
+[32m+[m[32m  m_Tag:[m[41m [m
+[32m+[m[32m  m_SpeedParameter:[m[41m [m
+[32m+[m[32m  m_MirrorParameter:[m[41m [m
+[32m+[m[32m  m_CycleOffsetParameter:[m[41m [m
+[32m+[m[32m  m_TimeParameter:[m[41m [m
+[32m+[m[32m--- !u!1102 &1102488936649770068[m
+[32m+[m[32mAnimatorState:[m
+[32m+[m[32m  serializedVersion: 5[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name: BluePollen[m
+[32m+[m[32m  m_Speed: 1[m
+[32m+[m[32m  m_CycleOffset: 0[m
+[32m+[m[32m  m_Transitions:[m
+[32m+[m[32m  - {fileID: 1101594754130757372}[m
+[32m+[m[32m  m_StateMachineBehaviours: [][m
+[32m+[m[32m  m_Position: {x: 50, y: 50, z: 0}[m
+[32m+[m[32m  m_IKOnFeet: 0[m
+[32m+[m[32m  m_WriteDefaultValues: 1[m
+[32m+[m[32m  m_Mirror: 0[m
+[32m+[m[32m  m_SpeedParameterActive: 0[m
+[32m+[m[32m  m_MirrorParameterActive: 0[m
+[32m+[m[32m  m_CycleOffsetParameterActive: 0[m
+[32m+[m[32m  m_TimeParameterActive: 0[m
+[32m+[m[32m  m_Motion: {fileID: 7400000, guid: 9d28adc51d9e9ec449e4e071caab18c5, type: 2}[m
+[32m+[m[32m  m_Tag:[m[41m [m
+[32m+[m[32m  m_SpeedParameter:[m[41m [m
+[32m+[m[32m  m_MirrorParameter:[m[41m [m
+[32m+[m[32m  m_CycleOffsetParameter:[m[41m [m
+[32m+[m[32m  m_TimeParameter:[m[41m [m
+[32m+[m[32m--- !u!1102 &1102642844950371336[m
+[32m+[m[32mAnimatorState:[m
+[32m+[m[32m  serializedVersion: 5[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name: PurplePollen[m
+[32m+[m[32m  m_Speed: 1[m
+[32m+[m[32m  m_CycleOffset: 0[m
+[32m+[m[32m  m_Transitions:[m
+[32m+[m[32m  - {fileID: 1101594260271225340}[m
+[32m+[m[32m  m_StateMachineBehaviours: [][m
+[32m+[m[32m  m_Position: {x: 50, y: 50, z: 0}[m
+[32m+[m[32m  m_IKOnFeet: 0[m
+[32m+[m[32m  m_WriteDefaultValues: 1[m
+[32m+[m[32m  m_Mirror: 0[m
+[32m+[m[32m  m_SpeedParameterActive: 0[m
+[32m+[m[32m  m_MirrorParameterActive: 0[m
+[32m+[m[32m  m_CycleOffsetParameterActive: 0[m
+[32m+[m[32m  m_TimeParameterActive: 0[m
+[32m+[m[32m  m_Motion: {fileID: 7400000, guid: 755c89c76b67964489bf41f9466fc171, type: 2}[m
+[32m+[m[32m  m_Tag:[m[41m [m
+[32m+[m[32m  m_SpeedParameter:[m[41m [m
+[32m+[m[32m  m_MirrorParameter:[m[41m [m
+[32m+[m[32m  m_CycleOffsetParameter:[m[41m [m
+[32m+[m[32m  m_TimeParameter:[m[41m [m
+[32m+[m[32m--- !u!1102 &1102745129019658780[m
+[32m+[m[32mAnimatorState:[m
+[32m+[m[32m  serializedVersion: 5[m
+[32m+[m[32m  m_ObjectHideFlags: 1[m
+[32m+[m[32m  m_PrefabParentObject: {fileID: 0}[m
+[32m+[m[32m  m_PrefabInternal: {fileID: 0}[m
+[32m+[m[32m  m_Name: RedPollen[m
+[32m+[m[32m  m_Speed: 1[m
+[32m+[m[32m  m_CycleOffset: 0[m
+[32m+[m[32m  m_Transitions:[m
+[32m+[m[32m  - {fileID: 1101512868802904668}[m
+[32m+[m[32m  m_StateMachineBehaviours: [][m
+[32m+[m[32m  m_Position: {x: 50, y: 50, z: 0}[m
+[32m+[m[32m  m_IKOnFeet: 0[m
+[32m+[m[32m  m_WriteDefaultValues: 1[m
+[32m+[m[32m  m_Mirror: 0[m
+[32m+[m[32m  m_SpeedParameterActive: 0[m
+[32m+[m[32m  m_MirrorParameterActive: 0[m
+[32m+[m[32m  m_CycleOffsetParameterActive: 0[m
+[32m+[m[32m  m_TimeParameterActive: 0[m
+[32m+[m[32m  m_Motion: {fileID: 7400000, guid: 755c89c76b67964489bf41f9466fc171, type: 2}[m
+[32m+[m[32m  m_Tag:[m[41m [m
+[32m+[m[32m  m_SpeedParameter:[m[41m [m
+[32m+[m[32m  m_MirrorParameter:[m[41m [m
+[32m+[m[32m  m_CycleOffsetParameter:[m[41m [m
+[32m+[m[32m  m_TimeParameter:[m[41m [m
+ --- !u!1107 &1107022299773370782[m
+ AnimatorStateMachine:[m
+   serializedVersion: 5[m
+[36m@@ -56,14 +386,26 @@[m [mAnimatorStateMachine:[m
+   m_ChildStates:[m
+   - serializedVersion: 1[m
+     m_State: {fileID: 1102167365566892858}[m
+[31m-    m_Position: {x: 200, y: 0, z: 0}[m
+[32m+[m[32m    m_Position: {x: 228, y: 120, z: 0}[m
+[32m+[m[32m  - serializedVersion: 1[m
+[32m+[m[32m    m_State: {fileID: 1102356774418034510}[m
+[32m+[m[32m    m_Position: {x: 228, y: -72, z: 0}[m
+[32m+[m[32m  - serializedVersion: 1[m
+[32m+[m[32m    m_State: {fileID: 1102488936649770068}[m
+[32m+[m[32m    m_Position: {x: 648, y: -72, z: 0}[m
+[32m+[m[32m  - serializedVersion: 1[m
+[32m+[m[32m    m_State: {fileID: 1102642844950371336}[m
+[32m+[m[32m    m_Position: {x: 648, y: 48, z: 0}[m
+[32m+[m[32m  - serializedVersion: 1[m
+[32m+[m[32m    m_State: {fileID: 1102745129019658780}[m
+[32m+[m[32m    m_Position: {x: 648, y: 168, z: 0}[m
+   m_ChildStateMachines: [][m
+   m_AnyStateTransitions: [][m
+   m_EntryTransitions: [][m
+   m_StateMachineTransitions: {}[m
+   m_StateMachineBehaviours: [][m
+[31m-  m_AnyStatePosition: {x: 50, y: 20, z: 0}[m
+[32m+[m[32m  m_AnyStatePosition: {x: -12, y: -96, z: 0}[m
+   m_EntryPosition: {x: 50, y: 120, z: 0}[m
+[31m-  m_ExitPosition: {x: 800, y: 120, z: 0}[m
+[32m+[m[32m  m_ExitPosition: {x: 960, y: 12, z: 0}[m
+   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}[m
+   m_DefaultState: {fileID: 1102167365566892858}[m
+[1mdiff --git a/Assets/Prefabs/Flower1.prefab b/Assets/Prefabs/Flower1.prefab[m
+[1mindex 62a26af..6ce3281 100644[m
+[1m--- a/Assets/Prefabs/Flower1.prefab[m
+[1m+++ b/Assets/Prefabs/Flower1.prefab[m
+[36m@@ -39,7 +39,7 @@[m [mGameObject:[m
+   - component: {fileID: 114783225449738022}[m
+   m_Layer: 0[m
+   m_Name: Cristal[m
+[31m-  m_TagString: Untagged[m
+[32m+[m[32m  m_TagString: BlueFlower[m
+   m_Icon: {fileID: 0}[m
+   m_NavMeshLayer: 0[m
+   m_StaticEditorFlags: 0[m
+[36m@@ -61,22 +61,6 @@[m [mGameObject:[m
+   m_NavMeshLayer: 0[m
+   m_StaticEditorFlags: 0[m
+   m_IsActive: 1[m
+[31m---- !u!1 &1935420139329944[m
+[31m-GameObject:[m
+[31m-  m_ObjectHideFlags: 0[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 100100000}[m
+[31m-  serializedVersion: 5[m
+[31m-  m_Component:[m
+[31m-  - component: {fileID: 4387875298975312}[m
+[31m-  - component: {fileID: 212699850996212120}[m
+[31m-  m_Layer: 0[m
+[31m-  m_Name: Pollen[m
+[31m-  m_TagString: Untagged[m
+[31m-  m_Icon: {fileID: 0}[m
+[31m-  m_NavMeshLayer: 0[m
+[31m-  m_StaticEditorFlags: 0[m
+[31m-  m_IsActive: 0[m
+ --- !u!4 &4387366961547486[m
+ Transform:[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -90,19 +74,6 @@[m [mTransform:[m
+   m_Father: {fileID: 4479916395764498}[m
+   m_RootOrder: 0[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[31m---- !u!4 &4387875298975312[m
+[31m-Transform:[m
+[31m-  m_ObjectHideFlags: 1[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 100100000}[m
+[31m-  m_GameObject: {fileID: 1935420139329944}[m
+[31m-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}[m
+[31m-  m_LocalPosition: {x: 0, y: 0, z: 0}[m
+[31m-  m_LocalScale: {x: 5, y: 5, z: 1}[m
+[31m-  m_Children: [][m
+[31m-  m_Father: {fileID: 4479916395764498}[m
+[31m-  m_RootOrder: 2[m
+[31m-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+ --- !u!4 &4479916395764498[m
+ Transform:[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -115,7 +86,6 @@[m [mTransform:[m
+   m_Children:[m
+   - {fileID: 4387366961547486}[m
+   - {fileID: 4535771822597432}[m
+[31m-  - {fileID: 4387875298975312}[m
+   m_Father: {fileID: 0}[m
+   m_RootOrder: 0[m
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}[m
+[36m@@ -193,7 +163,6 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: ef1c18578214d6945aab73412634b178, type: 3}[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+[31m-  pollenPrefab: {fileID: 1935420139329944}[m
+ --- !u!212 &212413734675018022[m
+ SpriteRenderer:[m
+   m_ObjectHideFlags: 1[m
+[36m@@ -282,47 +251,3 @@[m [mSpriteRenderer:[m
+   m_SpriteTileMode: 0[m
+   m_WasSpriteAssigned: 1[m
+   m_MaskInteraction: 0[m
+[31m---- !u!212 &212699850996212120[m
+[31m-SpriteRenderer:[m
+[31m-  m_ObjectHideFlags: 1[m
+[31m-  m_PrefabParentObject: {fileID: 0}[m
+[31m-  m_PrefabInternal: {fileID: 100100000}[m
+[31m-  m_GameObject: {fileID: 1935420139329944}[m
+[31m-  m_Enabled: 1[m
+[31m-  m_CastShadows: 0[m
+[31m-  m_ReceiveShadows: 0[m
+[31m-  m_DynamicOccludee: 1[m
+[31m-  m_MotionVectors: 1[m
+[31m-  m_LightProbeUsage: 1[m
+[31m-  m_ReflectionProbeUsage: 1[m
+[31m-  m_Materials:[m
+[31m-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}[m
+[31m-  m_StaticBatchInfo:[m
+[31m-    firstSubMesh: 0[m
+[31m-    subMeshCount: 0[m
+[31m-  m_StaticBatchRoot: {fileID: 0}[m
+[31m-  m_ProbeAnchor: {fileID: 0}[m
+[31m-  m_LightProbeVolumeOverride: {fileID: 0}[m
+[31m-  m_ScaleInLightmap: 1[m
+[31m-  m_PreserveUVs: 0[m
+[31m-  m_IgnoreNormalsForChartDetection: 0[m
+[31m-  m_ImportantGI: 0[m
+[31m-  m_StitchLightmapSeams: 0[m
+[31m-  m_SelectedEditorRenderState: 0[m
+[31m-  m_MinimumChartSize: 4[m
+[31m-  m_AutoUVMaxDistance: 0.5[m
+[31m-  m_AutoUVMaxAngle: 89[m
+[31m-  m_LightmapParameters: {fileID: 0}[m
+[31m-  m_SortingLayerID: 0[m
+[31m-  m_SortingLayer: 0[m
+[31m-  m_SortingOrder: 0[m
+[31m-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}[m
+[31m-  m_Color: {r: 0.3372549, g: 0.58431375, b: 0.909804, a: 1}[m
+[31m-  m_FlipX: 0[m
+[31m-  m_FlipY: 0[m
+[31m-  m_DrawMode: 0[m
+[31m-  m_Size: {x: 0.9375, y: 0.953125}[m
+[31m-  m_AdaptiveModeThreshold: 0.5[m
+[31m-  m_SpriteTileMode: 0[m
+[31m-  m_WasSpriteAssigned: 1[m
+[31m-  m_MaskInteraction: 0[m
+[1mdiff --git a/Assets/Prefabs/Flower2.prefab b/Assets/Prefabs/Flower2.prefab[m
+[1mindex c9e1471..14af342 100644[m
+[1m--- a/Assets/Prefabs/Flower2.prefab[m
+[1m+++ b/Assets/Prefabs/Flower2.prefab[m
+[36m@@ -39,7 +39,7 @@[m [mGameObject:[m
+   - component: {fileID: 114783225449738022}[m
+   m_Layer: 0[m
+   m_Name: Cristal[m
+[31m-  m_TagString: Untagged[m
+[32m+[m[32m  m_TagString: PurpleFlower[m
+   m_Icon: {fileID: 0}[m
+   m_NavMeshLayer: 0[m
+   m_StaticEditorFlags: 0[m
+[36m@@ -193,7 +193,6 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: ef1c18578214d6945aab73412634b178, type: 3}[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+[31m-  pollenPrefab: {fileID: 1806869877146536}[m
+ --- !u!212 &212102275621622160[m
+ SpriteRenderer:[m
+   m_ObjectHideFlags: 1[m
+[1mdiff --git a/Assets/Prefabs/Flower3.prefab b/Assets/Prefabs/Flower3.prefab[m
+[1mindex 89d15aa..1777d34 100644[m
+[1m--- a/Assets/Prefabs/Flower3.prefab[m
+[1m+++ b/Assets/Prefabs/Flower3.prefab[m
+[36m@@ -39,7 +39,7 @@[m [mGameObject:[m
+   - component: {fileID: 114783225449738022}[m
+   m_Layer: 0[m
+   m_Name: Cristal[m
+[31m-  m_TagString: Untagged[m
+[32m+[m[32m  m_TagString: RedFlower[m
+   m_Icon: {fileID: 0}[m
+   m_NavMeshLayer: 0[m
+   m_StaticEditorFlags: 0[m
+[36m@@ -193,7 +193,6 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: ef1c18578214d6945aab73412634b178, type: 3}[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+[31m-  pollenPrefab: {fileID: 1800827962451960}[m
+ --- !u!212 &212086841669769936[m
+ SpriteRenderer:[m
+   m_ObjectHideFlags: 1[m
+[1mdiff --git a/Assets/Prefabs/bee.prefab b/Assets/Prefabs/bee.prefab[m
+[1mindex 6ab7235..fcfc3b0 100644[m
+[1m--- a/Assets/Prefabs/bee.prefab[m
+[1m+++ b/Assets/Prefabs/bee.prefab[m
+[36m@@ -120,10 +120,6 @@[m [mMonoBehaviour:[m
+   m_Script: {fileID: 11500000, guid: 29d0d673d47783649bfae4c1abcbd5b0, type: 3}[m
+   m_Name: [m
+   m_EditorClassIdentifier: [m
+[31m-  BluePollenAnimation: {fileID: 9100000, guid: 36e54407c519d1e47be13c1e70a068d2, type: 2}[m
+[31m-  RedPollenAnimation: {fileID: 9100000, guid: 750bcdbffa73a8842a21b0b2af6689d2, type: 2}[m
+[31m-  PurplePollenAnimation: {fileID: 9100000, guid: 1898c9bd9798a6e48b40d9124c251178,[m
+[31m-    type: 2}[m
+ --- !u!212 &212768840517375174[m
+ SpriteRenderer:[m
+   m_ObjectHideFlags: 1[m
+[1mdiff --git a/Assets/Scripts/BeeManager.cs b/Assets/Scripts/BeeManager.cs[m
+[1mindex 00d1ac2..61ecc13 100644[m
+[1m--- a/Assets/Scripts/BeeManager.cs[m
+[1m+++ b/Assets/Scripts/BeeManager.cs[m
+[36m@@ -4,13 +4,10 @@[m [musing UnityEngine;[m
+ [m
+ public class BeeManager : MonoBehaviour[m
+ {[m
+[31m-	[SerializeField] private RuntimeAnimatorController BluePollenAnimation;[m
+[31m-	[SerializeField] private RuntimeAnimatorController RedPollenAnimation;[m
+[31m-	[SerializeField] private RuntimeAnimatorController PurplePollenAnimation;[m
+[31m-[m
+ 	private Animator beeAnimator;[m
+ 	[m
+ 	private int currentScore = 0;[m
+[32m+[m	[32mprivate bool isHoldingPollen;[m[41m[m
+ 	[m
+ 	public int CurrentScore[m
+ 	{[m
+[36m@@ -28,7 +25,40 @@[m [mpublic class BeeManager : MonoBehaviour[m
+ 	{[m
+ 		if (Input.GetKeyDown(KeyCode.Space))[m
+ 		{	[m
+[31m-			beeAnimator.runtimeAnimatorController = RedPollenAnimation;[m
+[32m+[m		[32m}[m[41m[m
+[32m+[m	[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m	[32mprivate void OnCollisionEnter2D(Collision2D other)[m[41m[m
+[32m+[m	[32m{[m[41m[m
+[32m+[m		[32mGameObject otherObject = other.gameObject;[m[41m[m
+[32m+[m[41m[m
+[32m+[m		[32mif (otherObject.tag.Contains("Flower"))[m[41m[m
+[32m+[m		[32m{[m[41m[m
+[32m+[m[41m			[m
+[32m+[m			[32mbeeAnimator.SetTrigger("PollenPick");[m[41m[m
+[32m+[m[41m[m
+[32m+[m			[32mif (isHoldingPollen)[m[41m[m
+[32m+[m			[32m{[m[41m[m
+[32m+[m				[32mbeeAnimator.SetTrigger("DropPollen");[m[41m[m
+[32m+[m				[32misHoldingPollen = false;[m[41m[m
+[32m+[m				[32mreturn;[m[41m[m
+[32m+[m			[32m}[m[41m[m
+[32m+[m[41m			[m
+[32m+[m[41m			[m
+[32m+[m			[32mswitch (otherObject.tag)[m[41m[m
+[32m+[m			[32m{[m[41m[m
+[32m+[m				[32mcase "BlueFlower":[m[41m[m
+[32m+[m					[32mbeeAnimator.SetTrigger("Blue");[m[41m[m
+[32m+[m					[32mbreak;[m[41m[m
+[32m+[m				[32mcase "RedFlower":[m[41m[m
+[32m+[m					[32mbeeAnimator.SetTrigger("Red");[m[41m[m
+[32m+[m					[32mbreak;[m[41m[m
+[32m+[m				[32mcase "PurpleFlower":[m[41m[m
+[32m+[m					[32mbeeAnimator.SetTrigger("Purple");[m[41m[m
+[32m+[m					[32mbreak;[m[41m[m
+[32m+[m[41m					[m
+[32m+[m			[32m}[m[41m[m
+[32m+[m			[32misHoldingPollen = true;[m[41m[m
+ 		}[m
+ 	}[m
+ }[m
+[1mdiff --git a/Assets/Scripts/FlowerController.cs b/Assets/Scripts/FlowerController.cs[m
+[1mindex 7ae422e..ed5b5dd 100644[m
+[1m--- a/Assets/Scripts/FlowerController.cs[m
+[1m+++ b/Assets/Scripts/FlowerController.cs[m
+[36m@@ -4,11 +4,17 @@[m [musing UnityEngine;[m
+ [m
+ public class FlowerController : MonoBehaviour[m
+ {[m
+[31m-[m
+[31m-	[SerializeField] private GameObject pollenPrefab;[m
+[31m-	[m
+ 	private const int SCORE_PICK = 10;[m
+ 	[m
+[32m+[m[41m	[m
+[32m+[m	[32mprivate Color color;[m[41m[m
+[32m+[m[41m[m
+[32m+[m	[32mpublic Color Color[m[41m[m
+[32m+[m	[32m{[m[41m[m
+[32m+[m		[32mget { return color; }[m[41m[m
+[32m+[m		[32mset { color = value; }[m[41m[m
+[32m+[m	[32m}[m[41m[m
+[32m+[m[41m[m
+ 	// Use this for initialization[m
+ 	void Start ()[m
+ 	{[m
+[36m@@ -23,10 +29,8 @@[m [mpublic class FlowerController : MonoBehaviour[m
+ 	{[m
+ 		if (other.gameObject.CompareTag("Player"))[m
+ 		{[m
+[31m-			[m
+ 			BeeManager bm = GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>();[m
+ 			bm.CurrentScore += SCORE_PICK;[m
+[31m-[m
+ 		}[m
+ [m
+ 	}[m
+[1mdiff --git a/Assets/Scripts/Game.cs b/Assets/Scripts/Game.cs[m
+[1mindex e1fd7c9..2d03643 100644[m
+[1m--- a/Assets/Scripts/Game.cs[m
+[1m+++ b/Assets/Scripts/Game.cs[m
+[36m@@ -25,6 +25,8 @@[m [mpublic class Game : MonoBehaviour[m
+             Vector3 pos =  new Vector3(5 + flowerDistance * 7f* i, multiplier, 0f);[m
+             [m
+             GameObject flower = Instantiate(randomFlowerPrefab, pos,Quaternion.identity); [m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+             flowers.Add(flower);[m
+             [m
+             float vahe = flower.transform.localScale.y * multiplier;[m
+[1mdiff --git a/Assets/Sprites/BluePollen.png b/Assets/Sprites/BluePollen.png[m
+[1mindex 03e9dbb..5182131 100644[m
+Binary files a/Assets/Sprites/BluePollen.png and b/Assets/Sprites/BluePollen.png differ
+[1mdiff --git a/Assets/Sprites/BluePollen.png.meta b/Assets/Sprites/BluePollen.png.meta[m
+[1mindex 34ebfca..49a2b7b 100644[m
+[1m--- a/Assets/Sprites/BluePollen.png.meta[m
+[1m+++ b/Assets/Sprites/BluePollen.png.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: eca81840f60d5a94a934e12883c6812a[m
+[31m-timeCreated: 1517037026[m
+[32m+[m[32mtimeCreated: 1517045854[m
+ licenseType: Free[m
+ TextureImporter:[m
+   fileIDToRecycleName:[m
+[36m@@ -12,6 +12,8 @@[m [mTextureImporter:[m
+     21300010: BluePollen_5[m
+     21300012: BluePollen_6[m
+     21300014: BluePollen_7[m
+[32m+[m[32m    21300016: BluePollen_8[m
+[32m+[m[32m    21300018: BluePollen_9[m
+   externalObjects: {}[m
+   serializedVersion: 4[m
+   mipmaps:[m
+[36m@@ -91,10 +93,10 @@[m [mTextureImporter:[m
+       name: BluePollen_0[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -105,10 +107,10 @@[m [mTextureImporter:[m
+       name: BluePollen_1[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -119,10 +121,10 @@[m [mTextureImporter:[m
+       name: BluePollen_2[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 65[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 64[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -133,10 +135,10 @@[m [mTextureImporter:[m
+       name: BluePollen_3[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -147,10 +149,10 @@[m [mTextureImporter:[m
+       name: BluePollen_4[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -161,10 +163,10 @@[m [mTextureImporter:[m
+       name: BluePollen_5[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -175,10 +177,10 @@[m [mTextureImporter:[m
+       name: BluePollen_6[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 1[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 0[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -189,10 +191,10 @@[m [mTextureImporter:[m
+       name: BluePollen_7[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 0[m
+[31m-        width: 62[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[1mdiff --git a/Assets/Sprites/PurplePollen.png b/Assets/Sprites/PurplePollen.png[m
+[1mindex 8726764..55039db 100644[m
+Binary files a/Assets/Sprites/PurplePollen.png and b/Assets/Sprites/PurplePollen.png differ
+[1mdiff --git a/Assets/Sprites/PurplePollen.png.meta b/Assets/Sprites/PurplePollen.png.meta[m
+[1mindex c23197f..db9499b 100644[m
+[1m--- a/Assets/Sprites/PurplePollen.png.meta[m
+[1m+++ b/Assets/Sprites/PurplePollen.png.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: 3fa1aa85d3b69dd42b41cb54499126c1[m
+[31m-timeCreated: 1517037035[m
+[32m+[m[32mtimeCreated: 1517045791[m
+ licenseType: Free[m
+ TextureImporter:[m
+   fileIDToRecycleName:[m
+[36m@@ -12,6 +12,8 @@[m [mTextureImporter:[m
+     21300010: PurplePollen_5[m
+     21300012: PurplePollen_6[m
+     21300014: PurplePollen_7[m
+[32m+[m[32m    21300016: PurplePollen_8[m
+[32m+[m[32m    21300018: PurplePollen_9[m
+   externalObjects: {}[m
+   serializedVersion: 4[m
+   mipmaps:[m
+[36m@@ -91,10 +93,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_0[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -105,10 +107,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_1[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -119,10 +121,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_2[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 65[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 64[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -133,10 +135,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_3[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -147,10 +149,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_4[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -161,10 +163,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_5[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -175,10 +177,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_6[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 1[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 0[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -189,10 +191,10 @@[m [mTextureImporter:[m
+       name: PurplePollen_7[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 0[m
+[31m-        width: 62[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[1mdiff --git a/Assets/Sprites/RedPollen.png b/Assets/Sprites/RedPollen.png[m
+[1mindex a619cb2..bbbeee9 100644[m
+Binary files a/Assets/Sprites/RedPollen.png and b/Assets/Sprites/RedPollen.png differ
+[1mdiff --git a/Assets/Sprites/RedPollen.png.meta b/Assets/Sprites/RedPollen.png.meta[m
+[1mindex db3ce1c..6f88ba2 100644[m
+[1m--- a/Assets/Sprites/RedPollen.png.meta[m
+[1m+++ b/Assets/Sprites/RedPollen.png.meta[m
+[36m@@ -1,6 +1,6 @@[m
+ fileFormatVersion: 2[m
+ guid: d350df351a6a84f4ba36acb5c1107728[m
+[31m-timeCreated: 1517037042[m
+[32m+[m[32mtimeCreated: 1517045866[m
+ licenseType: Free[m
+ TextureImporter:[m
+   fileIDToRecycleName:[m
+[36m@@ -12,6 +12,8 @@[m [mTextureImporter:[m
+     21300010: RedPollen_5[m
+     21300012: RedPollen_6[m
+     21300014: RedPollen_7[m
+[32m+[m[32m    21300016: RedPollen_8[m
+[32m+[m[32m    21300018: RedPollen_9[m
+   externalObjects: {}[m
+   serializedVersion: 4[m
+   mipmaps:[m
+[36m@@ -91,10 +93,10 @@[m [mTextureImporter:[m
+       name: RedPollen_0[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -105,10 +107,10 @@[m [mTextureImporter:[m
+       name: RedPollen_1[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -119,10 +121,10 @@[m [mTextureImporter:[m
+       name: RedPollen_2[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 65[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 64[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -133,10 +135,10 @@[m [mTextureImporter:[m
+       name: RedPollen_3[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 64[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -147,10 +149,10 @@[m [mTextureImporter:[m
+       name: RedPollen_4[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 1[m
+[32m+[m[32m        x: 0[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -161,10 +163,10 @@[m [mTextureImporter:[m
+       name: RedPollen_5[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 65[m
+[32m+[m[32m        x: 64[m
+         y: 0[m
+[31m-        width: 61[m
+[31m-        height: 61[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -175,10 +177,10 @@[m [mTextureImporter:[m
+       name: RedPollen_6[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 129[m
+[31m-        y: 1[m
+[31m-        width: 60[m
+[31m-        height: 62[m
+[32m+[m[32m        x: 128[m
+[32m+[m[32m        y: 0[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[36m@@ -189,10 +191,10 @@[m [mTextureImporter:[m
+       name: RedPollen_7[m
+       rect:[m
+         serializedVersion: 2[m
+[31m-        x: 193[m
+[32m+[m[32m        x: 192[m
+         y: 0[m
+[31m-        width: 62[m
+[31m-        height: 62[m
+[32m+[m[32m        width: 64[m
+[32m+[m[32m        height: 64[m
+       alignment: 0[m
+       pivot: {x: 0, y: 0}[m
+       border: {x: 0, y: 0, z: 0, w: 0}[m
+[1mdiff --git a/ProjectSettings/TagManager.asset b/ProjectSettings/TagManager.asset[m
+[1mindex 0bf5071..bf4933a 100644[m
+[1m--- a/ProjectSettings/TagManager.asset[m
+[1m+++ b/ProjectSettings/TagManager.asset[m
+[36m@@ -5,6 +5,9 @@[m [mTagManager:[m
+   serializedVersion: 2[m
+   tags:[m
+   - GameState[m
+[32m+[m[32m  - BlueFlower[m
+[32m+[m[32m  - PurpleFlower[m
+[32m+[m[32m  - RedFlower[m
+   layers:[m
+   - Default[m
+   - TransparentFX[m

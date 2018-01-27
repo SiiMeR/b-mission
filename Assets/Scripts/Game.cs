@@ -30,6 +30,8 @@ public class Game : MonoBehaviour
             Vector3 pos =  new Vector3(5 + flowerDistance *  i, multiplier, 0f);
             
             GameObject flower = Instantiate(randomFlowerPrefab, pos,Quaternion.identity); 
+            
+            
             flowers.Add(flower);
            
             

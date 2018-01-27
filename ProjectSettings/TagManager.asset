@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameState
+  - BlueFlower
+  - PurpleFlower
+  - RedFlower
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 
@@ -39,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1475084765
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
