@@ -9,6 +9,8 @@ TagManager:
   - PurpleFlower
   - RedFlower
   - pollinated
+  - AudioModal
+  - GuideModal
   layers:
   - Default
   - TransparentFX
