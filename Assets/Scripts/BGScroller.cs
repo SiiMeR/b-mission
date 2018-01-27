@@ -37,7 +37,7 @@ public class BGScroller : MonoBehaviour {
         foreach (Transform child in transform)
         {
             float newX = child.position.x - scrollSpeed * Time.deltaTime;
-            if (newX < -child.GetComponent<SpriteRenderer>().sprite.bounds.size.x * worldScreenHeight / child.GetComponent<SpriteRenderer>().sprite.bounds.size.y - (child.GetComponent<SpriteRenderer>().sprite.bounds.size.x / 2))
+            if (newX < -child.GetComponent<SpriteRenderer>().sprite.bounds.size.x * worldScreenHeight / child.GetComponent<SpriteRenderer>().sprite.bounds.size.y - child.GetComponent<SpriteRenderer>().sprite.bounds.size.x)
             {
                 Destroy(child.gameObject);
 
@@ -58,7 +58,7 @@ public class BGScroller : MonoBehaviour {
         go.layer = layerNumber;
         float scaleMultiplier = worldScreenHeight / renderer.sprite.bounds.size.y;
         go.transform.localScale = new Vector3(scaleMultiplier, scaleMultiplier, 1f);
-        float posX = x * renderer.sprite.bounds.size.x * scaleMultiplier - (renderer.sprite.bounds.size.x / 2);
+        float posX = x * renderer.sprite.bounds.size.x * scaleMultiplier - renderer.sprite.bounds.size.x;
         go.transform.position = new Vector3(posX, 0f, 100f);
 
         go.transform.parent = gameObject.transform;
