@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646284079423964}
   - component: {fileID: 114565467296532308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,6 +54,18 @@ MonoBehaviour:
   gameStateVar: {fileID: 0}
   tileSize: {x: 461, y: 320}
   backgroundTiles:
-  - {fileID: 21300000, guid: cdf4709c292f4544f90131079eea16cf, type: 3}
-  - {fileID: 21300000, guid: 5294c25921f8dcb42a7369d222a7bcda, type: 3}
-  speedMultiplier: 0.5
+  - {fileID: 21300000, guid: 68e4f827d3b6a6143acca41757e455a3, type: 3}
+  - {fileID: 21300000, guid: e0ad4ff2c3fe7ba4e964a6ad3f37428f, type: 3}
+  - {fileID: 21300000, guid: 6324b18a798924e45a671b42c690725e, type: 3}
+  - {fileID: 21300000, guid: 3e96694ff93e11e449b55b35de5ee9d7, type: 3}
+  - {fileID: 21300000, guid: a2daaa6620ebcf245a74af2358df5dbc, type: 3}
+  - {fileID: 21300000, guid: 53acd31eb5acb4b47a88064f9cf7057e, type: 3}
+  - {fileID: 21300000, guid: cb79b02636999a8409d2cabd70eae04a, type: 3}
+  - {fileID: 21300000, guid: c4e86d470dd4072488a936887ab4a6d6, type: 3}
+  - {fileID: 21300000, guid: 769b291cf9448344eb6acd9909ea0e88, type: 3}
+  - {fileID: 21300000, guid: 3a14174b2999f9040bdbf56c4c3cae3c, type: 3}
+  - {fileID: 21300000, guid: d0648bad5aba1fc4fa6a311df04f0799, type: 3}
+  - {fileID: 21300000, guid: 28174d5b6ec6770458397e88b37476f1, type: 3}
+  - {fileID: 21300000, guid: d8b860675e794f14585d6246e9c38222, type: 3}
+  - {fileID: 21300000, guid: 3442020b9c738094b845dcaf167fc3a4, type: 3}
+  speedMultiplier: 0.25

@@ -18,9 +18,9 @@ TagManager:
   - 
   - 
   - Background
-  - 
-  - 
-  - 
+  - Layer_2
+  - Layer_1
+  - BGExplosion
   - 
   - 
   - 
@@ -42,8 +42,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BGExplosion
+    uniqueID: 2958610757
+    locked: 0
   - name: Background
     uniqueID: 1475084765
+    locked: 0
+  - name: Layer_2
+    uniqueID: 768657401
+    locked: 0
+  - name: Layer_1
+    uniqueID: 4287007465
     locked: 0
   - name: Default
     uniqueID: 0

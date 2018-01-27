@@ -10,16 +10,18 @@ public class BGScroller : MonoBehaviour {
 
     private int tilesToScreenX;
     private int tilesToScreenY;
+    private Vector2 resolution;
+    private float worldScreenHeight;
 
     private float scrollSpeed;
 
 	// Use this for initialization
 	void Start () {
-        scrollSpeed = gameStateVar.GetComponent<Game>().speed * speedMultiplier;
+        resolution = new Vector2(Screen.width, Screen.height);
         tilesToScreenX = (int)Mathf.Ceil(Screen.width / tileSize.x) + 1;
 
-        float worldScreenHeight = Camera.main.orthographicSize * 2;
-        float halfScreenWidth = Camera.main.orthographicSize * Screen.width / Screen.height;//    Screen.width / 2;
+        worldScreenHeight = Camera.main.orthographicSize * 2;
+        float halfScreenWidth = Camera.main.orthographicSize * resolution.x / resolution.y;
 
         for (int x = 0; x < tilesToScreenX; x++)
         {
@@ -37,16 +39,11 @@ public class BGScroller : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     void FixedUpdate()
     {
         foreach (Transform child in transform)
         {
-            //child is your child transform
+            scrollSpeed = gameStateVar.GetComponent<Game>().speed * speedMultiplier;
             child.position = new Vector3(child.position.x - scrollSpeed * Time.deltaTime, child.position.y, child.position.z);
         }
     }
