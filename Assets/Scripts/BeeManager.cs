@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class BeeManager : MonoBehaviour
@@ -44,6 +42,7 @@ public class BeeManager : MonoBehaviour
 
 		if (otherObject.GetComponent<FlowerController>())
 		{
+			AudioManager.instance.Play("PollinateSound");
 			beeAnimator.SetTrigger("PollenPick");
 
 			bool equals = false;

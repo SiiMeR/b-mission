@@ -32,6 +32,9 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
+        
+        
         gameOverPanel.SetActive(false);            
         
         timeSpentLayer1 = 5.0f;
