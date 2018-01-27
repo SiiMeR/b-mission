@@ -16,6 +16,8 @@ public class BeeManager : MonoBehaviour
 	private Animator beeAnimator;
 	
 	private int currentScore = 0;
+    private GameObject lastFlower = null;
+
 	public int CurrentScore
 	{
 		get { return currentScore; }
@@ -36,7 +38,7 @@ public class BeeManager : MonoBehaviour
 	{
 		GameObject otherObject = other.gameObject;
 
-		if (otherObject.GetComponent<FlowerController>())
+		if (otherObject.GetComponent<FlowerController>() && lastFlower != otherObject)
 		{
 			beeAnimator.SetTrigger("PollenPick");
 
@@ -95,6 +97,8 @@ public class BeeManager : MonoBehaviour
 								break;
 				}
 			}
+
+            lastFlower = otherObject;
 		//	Destroy(gameObject);
 		}
 	}
