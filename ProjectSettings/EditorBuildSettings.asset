@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9629209a66c2a64438cc4d28e8c18377
+  - enabled: 1
+    path: Assets/Scenes/Reimo.unity
+    guid: 9302ec240710ff847bcede372d4e4455
