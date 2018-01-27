@@ -68,7 +68,7 @@ public class Game : MonoBehaviour
             if (flower.transform.position.x <= -15)
             {
                 flowers.Remove(flower);
-                Destroy(flower);
+                DestroyImmediate(flower);
             }
         });
         
