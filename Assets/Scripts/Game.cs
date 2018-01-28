@@ -161,26 +161,6 @@ public class Game : MonoBehaviour
         
     }
 
-    IEnumerator Move(float fromScale, float toScale)
-    {
-        Animator animator = player.GetComponent<Animator>();
-
-        float animationLength = animator.GetCurrentAnimatorStateInfo(0).length;
-        float dScale = (0.2f / animationLength) * Time.deltaTime;
-
-        bool ToBack = fromScale > toScale;
-            
-        Vector3 newScale = new Vector3(toScale, toScale, toScale);
-        while (animationLength >
-               animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
-        {
-            
-            player.transform.localScale = Vector3.Lerp(player.transform.localScale,newScale,animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-            
-            yield return null;
-        }
-       
-    }
     
     
     void Update()
@@ -204,10 +184,6 @@ public class Game : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 string triggerName = layer1Active ? "MoveToBack" : "MoveToFront";
-                float fromScale = layer1Active ? 1.0f : 0.8f;
-                float toScale = layer1Active ? 0.8f : 1.0f;
-
-                StartCoroutine(Move(fromScale, toScale));
 
                 player.GetComponent<Animator>().SetTrigger(triggerName);
                 
