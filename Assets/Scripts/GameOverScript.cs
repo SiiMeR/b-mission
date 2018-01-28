@@ -76,7 +76,7 @@ public class GameOverScript : MonoBehaviour
 
     public int CheckIfHighscore(int score)
     {
-   
+       
         if (scoreList.Count == 0)
         {
             return 0;
