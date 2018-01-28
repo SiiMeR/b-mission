@@ -46,8 +46,7 @@ public class Game : MonoBehaviour
         text.canvasRenderer.SetAlpha(0.0f);
 
 
-        timeSpent = 5.0f;
-        gameOverPanel.SetActive(false);            
+        timeSpent = 5.0f;            
         
         timeSpentLayer1 = 4.0f;
         timeSpentLayer2 = 0f;
@@ -229,9 +228,10 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(1.5f);
+       
         Time.timeScale = 0;
-        gameOverPanel.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        //gameOverPanel.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
         text.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
@@ -243,10 +243,11 @@ public class Game : MonoBehaviour
         
         gameOn = false;
         StartCoroutine(Example());
-       /* foreach (GameObject flower in layer1Flowers)
+        /*foreach (GameObject flower in layer1Flowers)
         {
             GameObject.Destroy(flower);
         }*/
+        
         
        
     }
