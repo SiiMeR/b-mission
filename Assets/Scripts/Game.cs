@@ -47,10 +47,10 @@ public class Game : MonoBehaviour
         
         highscore.SetActive(false);
         prompt.SetActive(false);
-              if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
-              {
+//              if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
+//              {
         AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
-              }
+//              }
 
         timeBetweenVines = Random.Range(10, 30);    
         gameOverPanel.SetActive(true);
