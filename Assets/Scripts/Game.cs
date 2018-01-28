@@ -275,7 +275,10 @@ public class Game : MonoBehaviour
         {
             prompt.SetActive(true);
             prompt.GetComponentsInChildren<InputField>()[0].ActivateInputField();
+            yield return new WaitUntil(() => !prompt.activeInHierarchy);
+            
         }
+
 
 
 
