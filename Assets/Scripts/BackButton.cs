@@ -17,6 +17,7 @@ public class BackButton : MonoBehaviour
 		
 	}
 
+
 	public void BackButtonClicked()
 	{
 		onCloseAction.SetActive(false);
