@@ -7,6 +7,11 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    [SerializeField] private GameObject highscore;
+    [SerializeField] private GameObject prompt;
+    
+
+    
     public static Game instance;
     public GameObject gameOverPanel;   
     private float timeSpent;
@@ -17,7 +22,6 @@ public class Game : MonoBehaviour
 
     private float timeSinceSpeedChange;
     public Image black;
-    public Text text;
 
     public List<GameObject> FlowerPrefabs;
     
@@ -40,15 +44,17 @@ public class Game : MonoBehaviour
 
     void Start()
     {
-        if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
-        {
-            AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
-        }
+        
+        highscore.SetActive(false);
+        prompt.SetActive(false);
+        //      if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
+        //       {
+        AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
+        //       }
 
         timeBetweenVines = Random.Range(10, 30);    
         gameOverPanel.SetActive(true);
         black.canvasRenderer.SetAlpha(0.0f);
-        text.canvasRenderer.SetAlpha(0.0f);
 
 
         timeSpent = 5.0f;            
@@ -169,59 +175,59 @@ public class Game : MonoBehaviour
     {
        
             
-            manageLayer1();
-            manageLayer2();
+        manageLayer1();
+        manageLayer2();
             
-            timeSinceSpeedChange += Time.deltaTime;
-            vineTime += Time.deltaTime;
+        timeSinceSpeedChange += Time.deltaTime;
+        vineTime += Time.deltaTime;
             
-            if (timeSinceSpeedChange >= speedChangeInterval && speed < maxSpeed)
-            {
-                speed += speedIncrement;
-                timeSinceSpeedChange = 0f;
-                FLOWER_COOLDOWN -= 0.2f;
-            }
+        if (timeSinceSpeedChange >= speedChangeInterval && speed < maxSpeed)
+        {
+            speed += speedIncrement;
+            timeSinceSpeedChange = 0f;
+            FLOWER_COOLDOWN -= 0.2f;
+        }
             
             
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                string triggerName = layer1Active ? "MoveToBack" : "MoveToFront";
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            string triggerName = layer1Active ? "MoveToBack" : "MoveToFront";
 
-                player.GetComponent<Animator>().SetTrigger(triggerName);
+            player.GetComponent<Animator>().SetTrigger(triggerName);
                 
-                layer1Active = !layer1Active; // flip the active layer
+            layer1Active = !layer1Active; // flip the active layer
 
 
-                if (layer1Active)
+            if (layer1Active)
+            {
+                
+                layer1Flowers.ForEach(flower =>
                 {
-                
-                    layer1Flowers.ForEach(flower =>
-                    {
                         
-                        setAlphaAndCollision(flower, true);
+                    setAlphaAndCollision(flower, true);
 
-                    });
-                    layer2Flowers.ForEach(flower =>
-                    {
-                      setAlphaAndCollision(flower,false);
-                    
-                    });
-                }
-                else // layer 2 active
+                });
+                layer2Flowers.ForEach(flower =>
                 {
-                
-                    layer1Flowers.ForEach(flower =>
-                    {
-                       setAlphaAndCollision(flower,false);
-
-
-                    });
-                    layer2Flowers.ForEach(flower =>
-                    {
-                        setAlphaAndCollision(flower,true);
+                    setAlphaAndCollision(flower,false);
                     
-                    });
-                }   
+                });
+            }
+            else // layer 2 active
+            {
+                
+                layer1Flowers.ForEach(flower =>
+                {
+                    setAlphaAndCollision(flower,false);
+
+
+                });
+                layer2Flowers.ForEach(flower =>
+                {
+                    setAlphaAndCollision(flower,true);
+                    
+                });
+            }   
             
         }      
     } 
@@ -258,7 +264,9 @@ public class Game : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.5f);
         //gameOverPanel.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
-        text.CrossFadeAlpha(1.0f, 1, true);
+        yield return new WaitForSecondsRealtime(2.0f);
+        prompt.SetActive(true);
+        highscore.SetActive(true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

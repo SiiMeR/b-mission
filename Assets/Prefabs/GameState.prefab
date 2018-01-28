@@ -58,4 +58,5 @@ MonoBehaviour:
   - {fileID: 1044378967957672, guid: 9f8c21b04b1526a46b5dc33edb35a1ab, type: 2}
   - {fileID: 1044378967957672, guid: ed964d1fc9633cc499fc732e0cf4dccd, type: 2}
   - {fileID: 1044378967957672, guid: 87b027bb9d785cb4895cae3b06f4a734, type: 2}
+  - {fileID: 1993302947508208, guid: 56089c3da8e7b1a40bc43963df46b1e7, type: 2}
   speed: 1.93

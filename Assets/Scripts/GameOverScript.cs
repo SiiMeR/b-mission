@@ -7,7 +7,6 @@ public class GameOverScript : MonoBehaviour
 {
 
 	[SerializeField] private GameObject[] highscores;
-
 	[SerializeField] private InputField name;
 
 	private string playerName = "";
