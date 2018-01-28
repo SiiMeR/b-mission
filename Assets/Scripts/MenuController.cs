@@ -33,7 +33,7 @@ public class MenuController : MonoBehaviour
 	}
 	public void OnPlayClicked()
 	{
-		SceneManager.LoadScene("Reimo");
+		SceneManager.LoadScene("New Scene");
 		//	
 	}
 
