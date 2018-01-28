@@ -28,7 +28,7 @@ public class Game : MonoBehaviour
 
 
     public float speed = 1f;
-    private float FLOWER_COOLDOWN = 8.0f;
+    private float FLOWER_COOLDOWN = 4.0f;
     private float maxSpeed = 50f;
     private float speedIncrement = 0.5f;
     private float speedChangeInterval = 10f;
@@ -59,8 +59,8 @@ public class Game : MonoBehaviour
 
         timeSpent = 5.0f;            
         
-        timeSpentLayer1 = 4.0f;
-        timeSpentLayer2 = 0f;
+        timeSpentLayer1 = 8.0f;
+        timeSpentLayer2 = 8f;
 
       
         layer1Flowers = new List<GameObject>();
@@ -96,7 +96,7 @@ public class Game : MonoBehaviour
         {
             flower.transform.position -= new Vector3(Time.deltaTime * speed, 0f, 0f);
 
-            if (flower.transform.position.x <= -15)
+            if (flower.transform.position.x <= -13)
             {
                 layer1Flowers.Remove(flower);
                 DestroyImmediate(flower);
