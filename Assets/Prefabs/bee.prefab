@@ -228,10 +228,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punText: {fileID: 114177869416507594}
   puns:
-  - To bee or not to bee
-  - Beeautiful
+  - Beeautiful!
   - Honey-do
-  - Bee mine
+  - Bee mine <3
+  - Un-bee-liveable!
+  - Beeyonce
+  - Honeybun
+  - Go B Team!
+  - Point A to Point Bee!
+  - Wasabee!
+  - Whoop-bee-do!
+  - "Don\u2019t hate, pollinate!"
+  - Hive five!
+  - To infinity and beeyond!
+  - Fluffy bunnybee!
+  - Bee positive
+  - Let It Bee
+  - Flapbee bird!
+  - Bumbledore
+  - Drop pollen, not bombs
+  - Make honey, not war
+  - Maybee its Maybeelin.
+  - I beelive in you!
+  - Flower power!
+  - "Honey, I\u2019m home!"
+  - The Great Gatsbee!
+  - The Bees Knees!
+  - Buzz-ooka!
+  - Not too shab-bee.
+  - Pablo Beecasso!
+  - Bee-thoven!
+  - IntereSTING!
+  - Bee amazed
+  - Bee-n there, done that
+  - Simply the bee-est
+  - May the force bee with you
+  - Bee a hero
+  - Beezza
+  - Buzzword
+  - Serious buzziness
+  - I am a bee positive
+  - Bee-lzebub
 --- !u!212 &212768840517375174
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -318,7 +355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.4091}
+  m_AnchoredPosition: {x: 1, y: 0.4091}
   m_SizeDelta: {x: 313.9291, y: 25.4855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224828568022868830
