@@ -28,10 +28,12 @@ public class Game : MonoBehaviour
     
     private List<GameObject> layer1Flowers;
     private List<GameObject> layer2Flowers;
+    private GameObject player;
+    
     
     private bool gameOn;
 
-    private bool layer1Active;
+    private bool layer1Active = true;
 
     void Start()
     {
@@ -46,8 +48,7 @@ public class Game : MonoBehaviour
         text.canvasRenderer.SetAlpha(0.0f);
 
 
-        timeSpent = 5.0f;
-        gameOverPanel.SetActive(false);            
+        timeSpent = 5.0f;            
         
         timeSpentLayer1 = 4.0f;
         timeSpentLayer2 = 0f;
@@ -58,6 +59,7 @@ public class Game : MonoBehaviour
         layer2Flowers = new List<GameObject>();
         instance = this;
         gameOn = true;
+        player = GameObject.FindGameObjectWithTag("Player");
 
     }
 
@@ -128,7 +130,6 @@ public class Game : MonoBehaviour
         {
             timeSpentLayer2 = 0;
             GameObject newFlower = generateNewFlower();
-            print(newFlower.transform.localScale);
             newFlower.transform.localScale = new Vector3(newFlower.transform.localScale.x-0.2f,newFlower.transform.localScale.y-0.2f,1f);
 
             foreach (var sr in newFlower.GetComponentsInChildren<SpriteRenderer>())
@@ -159,6 +160,9 @@ public class Game : MonoBehaviour
         
         
     }
+
+    
+    
     void Update()
     {
         
@@ -179,8 +183,13 @@ public class Game : MonoBehaviour
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                string triggerName = layer1Active ? "MoveToBack" : "MoveToFront";
+
+                player.GetComponent<Animator>().SetTrigger(triggerName);
+                
                 layer1Active = !layer1Active; // flip the active layer
-            
+
+
                 if (layer1Active)
                 {
                 
@@ -229,9 +238,10 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(1.5f);
+       
         Time.timeScale = 0;
-        gameOverPanel.SetActive(true);
+        yield return new WaitForSecondsRealtime(1.5f);
+        //gameOverPanel.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
         text.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
@@ -243,12 +253,10 @@ public class Game : MonoBehaviour
         
         gameOn = false;
         StartCoroutine(Example());
-       /* foreach (GameObject flower in layer1Flowers)
+        /*foreach (GameObject flower in layer1Flowers)
         {
             GameObject.Destroy(flower);
         }*/
-        
-       
     }
 
 
