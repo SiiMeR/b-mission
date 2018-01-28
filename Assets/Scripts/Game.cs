@@ -29,15 +29,16 @@ public class Game : MonoBehaviour
 
     public float speed = 1f;
     private float FLOWER_COOLDOWN = 4.0f;
-    private float maxSpeed = 50f;
+    private float FLOWER_COOLDOWN_MIN = 1.0f;
+    private float maxSpeed = 70f;
     private float speedIncrement = 0.5f;
     private float speedChangeInterval = 10f;
     
     private List<GameObject> layer1Flowers;
     private List<GameObject> layer2Flowers;
     private GameObject player;
-    
-    
+
+    private bool generatelayer1Vine = true;
     private bool gameOn;
 
     private bool layer1Active = true;
@@ -78,7 +79,21 @@ public class Game : MonoBehaviour
         {
             timeSpentLayer1 = 0;
             GameObject newFlower = generateNewFlower();
-
+            
+            if (newFlower.name.Contains("Stem") && !generatelayer1Vine)
+            {
+                newFlower.GetComponent<SpriteRenderer>().sortingLayerName = "Layer_2";    
+                if (layer1Active)
+                {
+                    setAlphaAndCollision(newFlower,false);
+                }
+                else
+                {
+                    setAlphaAndCollision(newFlower,true);
+                }
+                layer2Flowers.Add(newFlower);
+                return;
+            }
             if (layer1Active)
             {
                 setAlphaAndCollision(newFlower,true);
@@ -138,11 +153,15 @@ public class Game : MonoBehaviour
             timeSpentLayer2 = 0;
             GameObject newFlower = generateNewFlower();
             newFlower.transform.localScale = new Vector3(newFlower.transform.localScale.x-0.2f,newFlower.transform.localScale.y-0.2f,1f);
-
+            
             foreach (var sr in newFlower.GetComponentsInChildren<SpriteRenderer>())
             {
                 sr.sortingLayerName = "Layer_2";
             }
+        /*    if (newFlower.GetComponent<SpriteRenderer>())
+            {
+                newFlower.GetComponent<SpriteRenderer>().sortingLayerName = "Layer_2";
+            }*/
             if (layer1Active)
             {
                 setAlphaAndCollision(newFlower,false);
@@ -184,7 +203,11 @@ public class Game : MonoBehaviour
         {
             speed += speedIncrement;
             timeSinceSpeedChange = 0f;
-            FLOWER_COOLDOWN -= 0.2f;
+            if (FLOWER_COOLDOWN > FLOWER_COOLDOWN_MIN)
+            {
+                FLOWER_COOLDOWN -= 0.2f;
+            }
+            
         }
             
             
@@ -244,6 +267,7 @@ public class Game : MonoBehaviour
                 multiplier = 1f;
                 vineTime = 0f;
                 timeBetweenVines = Random.Range(10, 30); 
+                generatelayer1Vine = !generatelayer1Vine;
             }
         }
         else
