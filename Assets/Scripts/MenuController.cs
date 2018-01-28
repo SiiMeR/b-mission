@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,14 +9,14 @@ public class MenuController : MonoBehaviour
 {
 
 	[SerializeField] private GameObject audioModal;
-	[SerializeField] private GameObject guideModal;
+	[SerializeField] private GameObject guideModal;	
 
 	[SerializeField] private Slider music;
 	[SerializeField] private Slider sound;
 	
 	// Use this for initialization
 	void Start ()
-	{
+	{	
 		music.value = PlayerPrefs.GetFloat("MusicVol");
 		sound.value = PlayerPrefs.GetFloat("SoundVol");
 	}
@@ -25,9 +26,15 @@ public class MenuController : MonoBehaviour
 		
 	}
 
+
+	public void OnLenComplete()
+	{
+		SceneManager.LoadScene("Reimo");
+	}
 	public void OnPlayClicked()
 	{
 		SceneManager.LoadScene("Reimo");
+		//	
 	}
 
 	public void OnGuideClicked()
@@ -42,6 +49,7 @@ public class MenuController : MonoBehaviour
 
 	public void OnMusicValueChanged()
 	{
+		Camera.main.gameObject.GetComponent<AudioSource>().volume = music.value;
 		PlayerPrefs.SetFloat("MusicVol", music.value);
 	}
 	
