@@ -47,10 +47,10 @@ public class Game : MonoBehaviour
         
         highscore.SetActive(false);
         prompt.SetActive(false);
-        //      if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
-        //       {
+              if (string.IsNullOrEmpty("STOP THE FUCKING MUSIC"))
+              {
         AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
-        //       }
+              }
 
         timeBetweenVines = Random.Range(10, 30);    
         gameOverPanel.SetActive(true);
@@ -259,13 +259,26 @@ public class Game : MonoBehaviour
     }
     IEnumerator Example()
     {
-       
+        GameOverScript gos = gameOverPanel.GetComponent<GameOverScript>();
+     //   gos.GetHighscores();
+        
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1.5f);
         //gameOverPanel.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitForSecondsRealtime(2.0f);
-        prompt.SetActive(true);
+      //  prompt.SetActive(true);
+
+        
+        int isHighScore = gos.CheckIfHighscore(GameObject.FindGameObjectWithTag("Player").GetComponent<BeeManager>().CurrentScore);
+        print(isHighScore);
+        if (isHighScore == 1)
+        {
+            prompt.SetActive(true);
+        }
+        
+        
+        
         highscore.SetActive(true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
         Time.timeScale = 1;
