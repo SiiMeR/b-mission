@@ -10,11 +10,16 @@ public class GameOverScript : MonoBehaviour
     dreamloLeaderBoard.Score[] scores;
 
     [SerializeField] private GameObject[] highscores;
-	
+	[SerializeField] private InputField name;
+    [SerializeField] private GameObject prompt;
+
+	private string playerName = "";
+
     void Start()
     {
         GetHighscores();
     }
+
 	// Use this for initialization
 	public void GetHighscores () {
         this.dl = dreamloLeaderBoard.GetSceneDreamloLeaderboard();
@@ -23,11 +28,6 @@ public class GameOverScript : MonoBehaviour
         scoreList = new List<dreamloLeaderBoard.Score>();
         StartCoroutine(GetHighscore());
     }
-
-    // Update is called once per frame
-    void Update () {
-		
-	}
 
     private IEnumerator GetHighscore()
     {
@@ -40,13 +40,16 @@ public class GameOverScript : MonoBehaviour
                 foreach (dreamloLeaderBoard.Score currentScore in scoreList)
                 {
                     scores[i] = currentScore;
-                    if (i < highscores.Length) {
+                    if (i < highscores.Length)
+                    {
                         Text[] children = highscores[i].GetComponentsInChildren<Text>();
-                        foreach (Text child in children) {
+                        foreach (Text child in children)
+                        {
                             if (child.name == "name")
                             {
                                 child.text = currentScore.playerName.Substring(0, 13);
-                            } else
+                            }
+                            else
                             {
                                 child.text = currentScore.score.ToString();
                             }
@@ -58,7 +61,32 @@ public class GameOverScript : MonoBehaviour
         }
     }
 
-    public void CheckIfHighscore(int score)
+    public int CheckIfHighscore(int score)
     {
+        if (scores.Length == 0)
+        {
+            return 0;
+        }
+        if (scores.Length < 10)
+        {
+            return 1;
+        }
+        if (scores.Length > 9 && scores[9].score < score)
+        {
+            return 1;
+        }
+
+        return -1;
     }
+
+    // Update is called once per frame
+    void Update () {
+		
+	}
+
+	public void getName()
+	{
+		playerName = name.text;
+		print("sain nime : " + playerName);
+	}
 }

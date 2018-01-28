@@ -9,10 +9,11 @@ public class Game : MonoBehaviour
 {
     public static Game instance;
     public GameObject gameOverPanel;   
-    private float timeSpent;  
-    
+    private float timeSpent;
+    private float vineTime;
     private float timeSpentLayer1;
     private float timeSpentLayer2;
+    private float timeBetweenVines;
 
     private float timeSinceSpeedChange;
     public Image black;
@@ -20,6 +21,8 @@ public class Game : MonoBehaviour
 
     public List<GameObject> FlowerPrefabs;
     
+
+
     public float speed = 1f;
     private float FLOWER_COOLDOWN = 8.0f;
     private float maxSpeed = 50f;
@@ -41,8 +44,8 @@ public class Game : MonoBehaviour
         {
             AudioManager.instance.Play("Flight of the Bumble Bee 8 bit", isLooping:true, vol:0.7f);
         }
-        
 
+        timeBetweenVines = Random.Range(10, 30);    
         gameOverPanel.SetActive(true);
         black.canvasRenderer.SetAlpha(0.0f);
         text.canvasRenderer.SetAlpha(0.0f);
@@ -53,8 +56,7 @@ public class Game : MonoBehaviour
         timeSpentLayer1 = 4.0f;
         timeSpentLayer2 = 0f;
 
-        
-        FLOWER_COOLDOWN /=speed;
+      
         layer1Flowers = new List<GameObject>();
         layer2Flowers = new List<GameObject>();
         instance = this;
@@ -165,19 +167,19 @@ public class Game : MonoBehaviour
     
     void Update()
     {
-        
-        if (gameOn)
-        {
+       
             
             manageLayer1();
             manageLayer2();
             
             timeSinceSpeedChange += Time.deltaTime;
+            vineTime += Time.deltaTime;
             
             if (timeSinceSpeedChange >= speedChangeInterval && speed < maxSpeed)
             {
                 speed += speedIncrement;
                 timeSinceSpeedChange = 0f;
+                FLOWER_COOLDOWN -= 0.2f;
             }
             
             
@@ -220,16 +222,29 @@ public class Game : MonoBehaviour
                     
                     });
                 }   
-            }
+            
         }      
-
     } 
 
     GameObject generateNewFlower()
     {
         float multiplier = Random.Range(-5f, 0f);
-
-        GameObject randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
+        GameObject randomFlowerPrefab;
+        if (vineTime > timeBetweenVines)
+        {
+            //randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count)];
+            randomFlowerPrefab = FlowerPrefabs[3];
+            if (randomFlowerPrefab == FlowerPrefabs[3])
+            {
+                multiplier = 1f;
+                vineTime = 0f;
+                timeBetweenVines = Random.Range(10, 30); 
+            }
+        }
+        else
+        {
+            randomFlowerPrefab = FlowerPrefabs[Random.Range(0, FlowerPrefabs.Count-1)];
+        }
         float randomDistance = Random.Range(0, 10);        
         Vector3 fPos =  new Vector3(15 + randomDistance, multiplier, 0f);
         GameObject flower = Instantiate(randomFlowerPrefab, fPos,Quaternion.identity);
@@ -250,8 +265,6 @@ public class Game : MonoBehaviour
     }
     public void Restart()
     {
-        
-        gameOn = false;
         StartCoroutine(Example());
         /*foreach (GameObject flower in layer1Flowers)
         {
