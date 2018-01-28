@@ -275,10 +275,11 @@ public class Game : MonoBehaviour
         if (isHighScore == 1)
         {
             prompt.SetActive(true);
+            prompt.GetComponentsInChildren<InputField>()[0].ActivateInputField();
         }
-        
-        
-        
+
+
+
         highscore.SetActive(true);
         yield return new WaitUntil(() =>Input.GetKeyDown("return"));
         Time.timeScale = 1;
