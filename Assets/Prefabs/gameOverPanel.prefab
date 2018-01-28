@@ -212,23 +212,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1162947590699220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224638755950166974}
-  - component: {fileID: 222047886378718254}
-  - component: {fileID: 114584002680070762}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1231341552143664
 GameObject:
   m_ObjectHideFlags: 1
@@ -529,7 +512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1687139672033064
 GameObject:
   m_ObjectHideFlags: 1
@@ -678,7 +661,7 @@ GameObject:
   - component: {fileID: 114351851844380360}
   m_Layer: 5
   m_Name: gameOverPanel
-  m_TagString: Untagged
+  m_TagString: GOPNIK
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -779,7 +762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114051368137045704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -812,7 +795,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114062204811683866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -872,7 +855,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114119276916808388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -905,7 +888,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114128440942690386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -998,7 +981,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114140400350204572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1047,7 +1030,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114207465027946396
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1080,7 +1063,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114211047827321728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1113,7 +1096,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114222912658276556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1146,7 +1129,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114276173840296006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1287,6 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd72f453d4a9f9e44a0d32131e79e1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dl: {fileID: 0}
   highscores:
   - {fileID: 1101542321912452}
   - {fileID: 1929227381818518}
@@ -1299,6 +1283,7 @@ MonoBehaviour:
   - {fileID: 1050536535508604}
   - {fileID: 1687139672033064}
   name: {fileID: 114281993123207770}
+  prompt: {fileID: 0}
 --- !u!114 &114365494229260760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1394,7 +1379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114510752184928488
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1427,7 +1412,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114523576698792384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1460,7 +1445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114528935974699014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1589,41 +1574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 1.6019418
---- !u!114 &114584002680070762
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162947590699220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 64
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 64
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'You Lost!
-
-    Press enter to restart'
 --- !u!114 &114584894442144482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1656,7 +1606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114646716531374034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1689,7 +1639,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114797887537712552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1722,7 +1672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114807886620388834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1842,7 +1792,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114886779298083572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1902,7 +1852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114933001246154104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1968,7 +1918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!114 &114947120996825666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2001,7 +1951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 1. Name
+  m_Text: '-'
 --- !u!114 &114966673148545964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2034,19 +1984,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: '-'
 --- !u!222 &222033155470279582
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000497499408028}
---- !u!222 &222047886378718254
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162947590699220}
 --- !u!222 &222051194119938334
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2327,7 +2271,7 @@ RectTransform:
   m_Children:
   - {fileID: 224858157562392632}
   m_Father: {fileID: 224120339577557352}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2342,10 +2286,9 @@ RectTransform:
   m_GameObject: {fileID: 1970858969162538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0175, y: 1.0175, z: 1.0175}
+  m_LocalScale: {x: 1.045, y: 1.045, z: 1.045}
   m_Children:
   - {fileID: 224948644022260608}
-  - {fileID: 224638755950166974}
   - {fileID: 224723391393849462}
   - {fileID: 224093328956237372}
   m_Father: {fileID: 0}
@@ -2353,8 +2296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 407, y: 229}
-  m_SizeDelta: {x: 799.99994, y: 0}
+  m_AnchoredPosition: {x: 418, y: 229}
+  m_SizeDelta: {x: 800.00006, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224150163494181042
 RectTransform:
@@ -2780,24 +2723,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224638755950166974
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1162947590699220}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224120339577557352}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -34.542816}
-  m_SizeDelta: {x: 0, y: 178.9}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224649189220979972
 RectTransform:
   m_ObjectHideFlags: 1
@@ -2848,7 +2773,7 @@ RectTransform:
   - {fileID: 224243026757336216}
   - {fileID: 224812538515264540}
   m_Father: {fileID: 224120339577557352}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
