@@ -19,11 +19,16 @@ public class AudioManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+    //    Debug.Log(string.Format("sound {0} music {1}",soundVolume,musicVolume));
+    }
+
     void Awake()
     {
         musicVolume = PlayerPrefs.GetFloat("MusicVol");
         soundVolume = PlayerPrefs.GetFloat("SoundVol");
-        print("adoaiwdja " + PlayerPrefs.GetFloat("SoundVol"));
+        //print("adoaiwdja " + PlayerPrefs.GetFloat("SoundVol"));
         
         audioMap = new Dictionary<string, AudioClip>();
 
@@ -87,6 +92,8 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string audioName, float vol = 1f, bool isLooping = false, Vector3? position = null)
     {
+        
+        
         //Debug.Log("audioname___" + audioName);
         if (string.IsNullOrEmpty(audioName))
         {

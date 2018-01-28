@@ -14,8 +14,10 @@ public class MenuController : MonoBehaviour
 	[SerializeField] private Slider sound;
 	
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		music.value = PlayerPrefs.GetFloat("MusicVol");
+		sound.value = PlayerPrefs.GetFloat("SoundVol");
 	}
 	
 	// Update is called once per frame
