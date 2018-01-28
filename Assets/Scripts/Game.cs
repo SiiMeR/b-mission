@@ -281,9 +281,6 @@ public class Game : MonoBehaviour
         {
             GameObject.Destroy(flower);
         }*/
-        
-        
-       
     }
 
 
