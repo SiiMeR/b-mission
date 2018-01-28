@@ -269,6 +269,20 @@ MonoBehaviour:
   - Serious buzziness
   - I am a bee positive
   - Bee-lzebub
+  deathPuns:
+  - Is this the bezzzt you can do?
+  - Best bee 4
+  - Wannabee
+  - To bee or not to bee.
+  - Hive again!
+  - You can bee better!
+  - You buzzed out
+  - Why bee average when you can bee awesome?
+  - Maybee try again?
+  - "Maybee not\u2026"
+  - "IntereSTING\u2026"
+  - 'What kind of animal kills a lot of people? A: Hepatitis Bee.'
+  - Did you learn the A BEE C?
 --- !u!212 &212768840517375174
 SpriteRenderer:
   m_ObjectHideFlags: 1

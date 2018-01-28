@@ -26,6 +26,7 @@ public class BeeManager : MonoBehaviour
 	
     [SerializeField] public Text punText;
     public string[] puns;
+    public string[] deathPuns;
 
 	void Start()
 	{
@@ -117,6 +118,15 @@ public class BeeManager : MonoBehaviour
 			Destroy(otherObject.GetComponent<FlowerController>());
 		}
 	}
+
+    public void ShowDeathPun()
+    {
+        if (deathPuns.Length > 0)
+        {
+            punText.text = deathPuns[Random.Range(0, puns.Length)];
+            Invoke("RemovePun", 3);
+        }
+    }
 
     void RemovePun()
     {

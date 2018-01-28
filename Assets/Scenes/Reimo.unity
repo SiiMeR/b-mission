@@ -370,26 +370,6 @@ Prefab:
       propertyPath: m_FontData.m_MinSize
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114835375360817692, guid: becb8664467cd0f488b5ce043d774846,
-        type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114990645851582190, guid: becb8664467cd0f488b5ce043d774846,
-        type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 224659766907156218, guid: becb8664467cd0f488b5ce043d774846,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 224760013431383186, guid: becb8664467cd0f488b5ce043d774846,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.3700161
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: becb8664467cd0f488b5ce043d774846, type: 2}
   m_IsPrefabParent: 0
