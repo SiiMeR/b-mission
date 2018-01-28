@@ -16,9 +16,9 @@ public class MenuController : MonoBehaviour
 	
 	// Use this for initialization
 	void Start ()
-	{	
-		music.value = PlayerPrefs.GetFloat("MusicVol");
-		sound.value = PlayerPrefs.GetFloat("SoundVol");
+	{
+		music.value = PlayerPrefs.GetFloat("MusicVol",1f);
+		sound.value = PlayerPrefs.GetFloat("SoundVol",1f);
 	}
 	
 	// Update is called once per frame
