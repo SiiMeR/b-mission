@@ -123,7 +123,7 @@ public class BeeManager : MonoBehaviour
     {
         if (deathPuns.Length > 0)
         {
-            punText.text = deathPuns[Random.Range(0, puns.Length)];
+            punText.text = deathPuns[Random.Range(0, deathPuns.Length)];
             Invoke("RemovePun", 3);
         }
     }
