@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
 
 	[SerializeField] private GameObject audioModal;
 	[SerializeField] private GameObject guideModal;	
+	[SerializeField] private GameObject highScoreModal;	
 
 	[SerializeField] private Slider music;
 	[SerializeField] private Slider sound;
@@ -17,8 +18,15 @@ public class MenuController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		audioModal.SetActive(false);
+		guideModal.SetActive(false);
+		highScoreModal.SetActive(false);
+		
+		
 		music.value = PlayerPrefs.GetFloat("MusicVol",1f);
 		sound.value = PlayerPrefs.GetFloat("SoundVol",1f);
+		
+		
 	}
 	
 	// Update is called once per frame
@@ -37,6 +45,16 @@ public class MenuController : MonoBehaviour
 		//	
 	}
 
+	public void OnExitClicked()
+	{
+		Application.Quit();
+	}
+
+	public void OnScoreClicked()
+	{
+		highScoreModal.SetActive(true);
+	}
+	
 	public void OnGuideClicked()
 	{
 		guideModal.SetActive(true);

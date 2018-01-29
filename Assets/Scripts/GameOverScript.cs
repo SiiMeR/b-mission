@@ -10,8 +10,6 @@ public class GameOverScript : MonoBehaviour
 {
     public dreamloLeaderBoard dl;
     public List<dreamloLeaderBoard.Score> scoreList;
-    
-   // dreamloLeaderBoard.Score[] scores = {};
 
     [SerializeField] private GameObject[] highscores;
 	[SerializeField] private InputField name;
@@ -38,7 +36,6 @@ public class GameOverScript : MonoBehaviour
 
     private IEnumerator GetHighscore()
     {
-        print("sain uud skoord");
         while (scoreList.Count == 0)
         {
             
@@ -48,7 +45,6 @@ public class GameOverScript : MonoBehaviour
                 int i = 0;
                 foreach (dreamloLeaderBoard.Score currentScore in scoreList)
                 {
-                    //scoreList[i] = currentScore;
                     if (i < highscores.Length)
                     {
                         Text[] children = highscores[i].GetComponentsInChildren<Text>();
@@ -58,7 +54,6 @@ public class GameOverScript : MonoBehaviour
                             if (child.name == "name")
                             {
                                 child.text = currentScore.playerName;
-                                //   child.text = currentScore.playerName.Substring(0, 13);
                             }
                             else
                             {
@@ -73,7 +68,7 @@ public class GameOverScript : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
     }
-
+ 
     public int CheckIfHighscore(int score)
     {
        

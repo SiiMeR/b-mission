@@ -251,7 +251,12 @@ public class Game : MonoBehaviour
                 });
             }   
             
-        }      
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     } 
 
     GameObject generateNewFlower()
@@ -288,6 +293,7 @@ public class Game : MonoBehaviour
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(1.5f);
         //gameOverPanel.SetActive(true);
+        black.gameObject.SetActive(true);
         black.CrossFadeAlpha(1.0f, 1, true);
         yield return new WaitForSecondsRealtime(2.0f);
       //  prompt.SetActive(true);
@@ -303,11 +309,8 @@ public class Game : MonoBehaviour
             
         }
 
-
-
-
         highscore.SetActive(true);
-        yield return new WaitUntil(() =>Input.GetKeyDown("return"));
+        yield return new WaitUntil(() =>Input.GetKeyDown(KeyCode.Return));
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
